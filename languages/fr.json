@@ -1,0 +1,12 @@
+{
+  "theme-glass": {
+    "settings": {
+      "enable-blur-name": "Effets de flou (client)",
+      "enable-blur-hint": "⚠️ Activer ce paramètre peut causer une baisse de performance. Ce paramètre est désactivé par défaut pour le navigateur Firefox à cause d'une mauvaise gestion des performances de Firefox.",
+      "collapse-hotbar-name": "Réduire la barre de macro (global)",
+      "collapse-hotbar-hint": "Réduit la barre de macro à l'ouverture de FoundryVTT. Ce paramètre est utile si votre table n'utilise pas de macros.",
+      "no-pause-name": "Enlever la pause (global)",
+      "no-pause-hint": "Retire la pause à l'entrée dans la partie. Fonctionne uniquement lorsque le GM se connecte."
+    }
+  }
+}

@@ -1,0 +1,51 @@
+#interface {
+  section#ui-left {
+    aside#players {
+      @mixin reset;
+      @mixin blurred;
+      @mixin shadowed;
+      @mixin bordered;
+
+      /* PLAYER TEXT-ICON BUTTON */
+      h3 {
+        @mixin text-shadow;
+
+        color: $color-text;
+        font-size: 16px;
+        border-bottom: 0;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-text-highlight;
+        }
+
+        i {
+          font-size: 14px;
+        }
+
+        i.players-mode {
+          color: $color-text;
+        }
+
+        &:hover i.players-mode {
+          color: $color-text-highlight;
+        }
+      }
+
+      /* PLAYERS LIST */
+      ol#player-list li.player {
+        cursor: context-menu;
+
+        &.context {
+          border-color: transparent;
+        }
+
+        span.player-name {
+          @mixin text-shadow;
+
+          color: $color-text-dim;
+        }
+      }
+    }
+  }
+}

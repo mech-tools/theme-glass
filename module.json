@@ -1,0 +1,50 @@
+{
+  "id": "theme-glass",
+  "title": "Theme: Glass",
+  "description": "Theme: Glass for FoundryVTT.",
+  "version": "",
+  "library": "false",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11.308"
+  },
+  "authors": [
+    {
+      "name": "DarKDinDoN",
+      "url": "https://github.com/DarKDinDoN",
+      "discord": "Maxime#1562"
+    }
+  ],
+  "relationships": {},
+  "conflicts": [],
+  "socket": true,
+  "scripts": [],
+  "esmodules": ["./modules/module.js"],
+  "styles": ["styles/build/theme-glass.css"],
+  "flags": {
+    "hotReload": {
+      "extensions": ["css"],
+      "paths": ["styles/build/theme-glass.css"]
+    }
+  },
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "languages/fr.json"
+    }
+  ],
+  "url": "",
+  "bugs": "",
+  "changelog": "",
+  "manifest": "",
+  "download": "",
+  "license": "",
+  "readme": "",
+  "media": []
+}

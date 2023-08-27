@@ -1,0 +1,72 @@
+#interface {
+  section#ui-right {
+    div#sidebar {
+      section#combat {
+        header.combat-tracker-header {
+          /* HEADER FIRST PART */
+          nav.encounters {
+            a.combat-button {
+              @mixin icon-button $color-text-dim;
+            }
+
+            h4.encounter {
+              @mixin text-shadow;
+
+              font-size: 16px;
+              color: $color-text-dim;
+            }
+          }
+
+          /* HEADER SECOND PART */
+          div.encounter-controls {
+            a.combat-button {
+              @mixin icon-button $color-text-dim;
+            }
+
+            h3.encounter-title {
+              @mixin text-shadow;
+
+              color: $color-text;
+            }
+          }
+        }
+
+        /* CHARACTERS LIST */
+        ol#combat-tracker {
+          li.combatant {
+            &.active {
+              border-color: $color-accent-secondary;
+            }
+
+            div.token-name {
+              h4 {
+                color: $color-text;
+              }
+
+              div.combatant-controls {
+                a.combatant-control {
+                  @mixin icon-button $color-text-dim;
+                }
+
+                div.token-effects img {
+                  border-radius: 3px;
+                }
+              }
+            }
+
+            div.token-initiative span.initiative {
+              @mixin text-shadow;
+
+              color: $color-text;
+            }
+          }
+        }
+
+        /* FOOTER */
+        nav#combat-controls a.combat-control {
+          @mixin icon-button;
+        }
+      }
+    }
+  }
+}

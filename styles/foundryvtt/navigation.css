@@ -1,0 +1,33 @@
+#interface {
+  section#ui-middle {
+    header#ui-top {
+      margin-left: -206px;
+
+      nav#navigation {
+        /* TOGGLE BUTTON */
+        a#nav-toggle {
+          @mixin button;
+        }
+
+        /* SCENES LIST */
+        ol#scene-list li.nav-item {
+          @mixin button;
+
+          &.active {
+            border: 1px solid transparent;
+          }
+
+          &.view {
+            border: 1px solid rgba($color-accent-secondary, 1);
+          }
+
+          a.scene-name:hover {
+            @mixin reset;
+
+            color: $color-text-highlight;
+          }
+        }
+      }
+    }
+  }
+}

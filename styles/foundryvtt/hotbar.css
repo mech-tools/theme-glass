@@ -1,0 +1,81 @@
+#interface {
+  section#ui-middle {
+    footer#ui-bottom {
+      /* FIRST TWO ICONS */
+      div#hotbar div#hotbar-directory-controls {
+        @mixin reset;
+
+        a#bar-toggle,
+        a#macro-directory {
+          @mixin icon-button;
+        }
+
+        a#bar-toggle {
+          font-size: 18px;
+        }
+      }
+
+      nav#action-bar {
+        /* MACRO BAR */
+        ol#macro-list {
+          @mixin shadowed;
+          @mixin bordered;
+
+          position: relative;
+          margin-top: 2px;
+          height: 96%;
+
+          li.macro {
+            @mixin reset;
+            @mixin blurred;
+
+            border: 1px solid transparent;
+
+            &:not(:last-child) {
+              border-right: 1px solid rgba(0, 0, 0, 0.4);
+            }
+
+            &:hover {
+              border: 1px solid $color-accent-secondary;
+            }
+
+            span.macro-key {
+              @mixin text-shadow;
+
+              color: $color-text-dim;
+              background-color: transparent;
+            }
+
+            &.active span.macro-key {
+              background-color: rgba($color-accent, 0.9);
+            }
+          }
+        }
+
+        /* LOCK ICON */
+        div#hotbar-lock {
+          @mixin reset;
+
+          a.page-control {
+            @mixin icon-button;
+          }
+        }
+
+        /* PAGE CONTROLS */
+        div#hotbar-page-controls {
+          @mixin reset;
+
+          a.page-control {
+            @mixin icon-button;
+          }
+
+          span.page-number {
+            @mixin text-shadow;
+
+            color: $color-text;
+          }
+        }
+      }
+    }
+  }
+}

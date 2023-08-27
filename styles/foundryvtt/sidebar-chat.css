@@ -1,0 +1,61 @@
+#interface {
+  section#ui-right {
+    div#sidebar {
+      section#chat {
+        /* CHAT LOG */
+        ol#chat-log {
+          opacity: 0.9;
+        }
+
+        /* JUMP TO BOTTOM BUTTON */
+        div.jump-to-bottom a {
+          @mixin icon-button;
+
+          i {
+            font-size: 11px;
+            margin-right: 5px;
+          }
+        }
+
+        /* CONTROLS */
+        div#chat-controls {
+          > :last-child {
+            margin-right: 0;
+          }
+
+          label.chat-control-icon {
+            display: none;
+          }
+
+          select.roll-type-select {
+            @mixin select;
+
+            margin-left: 0;
+          }
+
+          div.control-buttons {
+            a.export-log i,
+            a.delete i {
+              @mixin icon-button $color-text-dim;
+
+              font-size: 13px;
+            }
+          }
+        }
+
+        /* TEXT FIELD */
+        form#chat-form {
+          @mixin bordered;
+
+          position: relative;
+          padding: 1px;
+          border-radius: 3px;
+
+          textarea#chat-message {
+            @mixin textarea;
+          }
+        }
+      }
+    }
+  }
+}

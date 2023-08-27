@@ -1,0 +1,32 @@
+{
+  "name": "theme-glass",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Theme: Glass, for FoundryVTT.",
+  "license": "MIT",
+  "author": "DarKDinDoN",
+  "scripts": {
+    "dev": "postcss styles/index.css --output styles/build/theme-glass.css --watch"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.22.11",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jsdoc": "^46.5.0",
+    "postcss": "^8.4.28",
+    "postcss-hexrgba": "^2.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-mixins": "^9.0.4",
+    "postcss-preset-env": "^9.1.1",
+    "postcss-simple-vars": "^7.0.1",
+    "prettier": "^3.0.2",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "prettier-plugin-packagejson": "^2.4.5",
+    "stylelint": "^15.10.3",
+    "stylelint-config-recommended": "^13.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+#interface {
+  section#ui-left {
+    img#logo {
+      display: none;
+    }
+  }
+}

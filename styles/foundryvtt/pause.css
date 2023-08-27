@@ -1,0 +1,17 @@
+figure#pause {
+  bottom: 8%;
+
+  /* IMAGE */
+  img {
+    top: 0;
+    left: calc(50% - 48px);
+    height: 96px;
+    width: 96px;
+    --fa-animation-duration: 10s;
+  }
+
+  /* TEXT */
+  figcaption {
+    font-size: 1.8em;
+  }
+}

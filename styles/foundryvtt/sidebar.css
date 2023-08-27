@@ -1,0 +1,18 @@
+#interface {
+  section#ui-right {
+    div#sidebar {
+      @mixin reset;
+
+      overflow: visible;
+
+      /* ICONS CONTAINER */
+      section.tab.active {
+        @mixin shadowed;
+        @mixin blurred;
+        @mixin bordered;
+
+        border-radius: 3px;
+      }
+    }
+  }
+}

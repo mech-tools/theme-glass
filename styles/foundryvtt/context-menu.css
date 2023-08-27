@@ -1,0 +1,32 @@
+#interface {
+  nav#context-menu {
+    @mixin shadowed;
+
+    z-index: 200;
+    background-color: $color-accent;
+
+    /* ITEMS LIST */
+    ol.context-items li.context-item {
+      @mixin text-link;
+
+      color: $color-text;
+      padding: 2px 5px;
+
+      &:hover {
+        @mixin reset;
+
+        cursor: pointer;
+      }
+
+      i {
+        @mixin reset;
+
+        color: rgba($color-accent-secondary, 0.75);
+      }
+
+      &:hover i {
+        text-shadow: rgba($color-accent-secondary, 0.4) 0 0 1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+#interface {
+  section#ui-left {
+    nav#controls {
+      margin-top: 100px;
+      padding-top: 10px;
+
+      /* MAIN LIST */
+      ol.main-controls li.scene-control {
+        @mixin button;
+      }
+
+      /* SECONDARY LIST */
+      ol.sub-controls li.control-tool {
+        @mixin button;
+      }
+    }
+  }
+}

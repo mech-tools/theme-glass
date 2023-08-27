@@ -1,0 +1,22 @@
+#interface {
+  section#ui-right {
+    div#sidebar {
+      nav#sidebar-tabs {
+        @mixin reset;
+
+        margin-top: 10px;
+
+        /* ICONS LIST */
+        a.item {
+          @mixin icon-button;
+
+          &.active {
+            @mixin reset;
+
+            border-bottom: 2px solid rgba($color-accent-secondary, 1);
+          }
+        }
+      }
+    }
+  }
+}
