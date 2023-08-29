@@ -35,11 +35,11 @@ If it becomes an issue, you can disable the blur effects in the settings of the 
 
 It was created with this in mind, but some systems use their own theme. For these systems, the module is not compatible.
 
-### And what about module?
+### And what about modules?
 
 Depends. Depending on the work load, I can make certain modules compatible with this theme.
 
 ### Why are some windows not transparent?
 
-Some parts of the FoundryVTT interface are very dependent on the system used (character sheets, items sheet, chat cards etc.).  
+Some parts of the FoundryVTT interface are very dependent on the system used (character sheets, items sheet, chat cards, etc.).  
 Since Theme: Glass is system agnostic, it is not really an option to skin those. But most of the visible interface should be transparent for player accounts.
