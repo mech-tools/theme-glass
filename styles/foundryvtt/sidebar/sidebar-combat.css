@@ -1,7 +1,7 @@
 #combat-popout section.window-content section.combat-sidebar,
 #interface #ui-right #sidebar #combat {
   header.combat-tracker-header {
-    border-bottom-color: rgba(0, 0, 0, 0.3);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
 
     /* HEADER FIRST PART */
     nav.encounters {
@@ -55,7 +55,9 @@
 
   /* FOOTER */
   #combat-controls {
-    border-top-color: rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+
+    border-top-color: rgba(255, 255, 255, 0.2);
 
     a.combat-control {
       @mixin link;
