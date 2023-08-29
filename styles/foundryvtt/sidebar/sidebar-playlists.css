@@ -48,6 +48,10 @@
   ol.directory-list li.playlist {
     padding: 0;
 
+    &:hover {
+      background-color: transparent;
+    }
+
     header.playlist-header {
       padding: 4px 6px;
     }
