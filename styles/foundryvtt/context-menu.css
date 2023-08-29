@@ -1,32 +1,29 @@
-#interface {
-  nav#context-menu {
-    @mixin shadowed;
+#context-menu {
+  box-shadow: $bg-shadow;
+  background-color: $color-accent;
 
-    z-index: 200;
-    background-color: $color-accent;
+  /* ITEMS LIST */
+  li.context-item {
+    color: $color-text !important;
+    text-shadow: $text-shadow !important;
+    padding: 2px 5px;
+    cursor: pointer;
 
-    /* ITEMS LIST */
-    ol.context-items li.context-item {
-      @mixin text-link;
+    &:hover,
+    &.active {
+      color: $color-text-highlight !important;
+    }
 
-      color: $color-text;
-      padding: 2px 5px;
+    a:hover {
+      text-shadow: $text-shadow !important;
+    }
 
-      &:hover {
-        @mixin reset;
+    i {
+      color: rgba($color-accent-secondary, 0.9) !important;
+    }
 
-        cursor: pointer;
-      }
-
-      i {
-        @mixin reset;
-
-        color: rgba($color-accent-secondary, 0.75);
-      }
-
-      &:hover i {
-        text-shadow: rgba($color-accent-secondary, 0.4) 0 0 1px;
-      }
+    &:hover i {
+      text-shadow: rgba($color-accent-secondary, 0.1) 0 0 1px !important;
     }
   }
 }

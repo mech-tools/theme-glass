@@ -1,80 +1,82 @@
-#interface {
-  section#ui-middle {
-    footer#ui-bottom {
-      /* FIRST TWO ICONS */
-      div#hotbar div#hotbar-directory-controls {
-        @mixin reset;
+#interface #ui-middle #ui-bottom #hotbar {
+  /* FIRST TWO ICONS */
+  #hotbar-directory-controls {
+    background: none;
+    border: 0;
+    box-shadow: none;
 
-        a#bar-toggle,
-        a#macro-directory {
-          @mixin icon-button;
+    #bar-toggle,
+    #macro-directory {
+      @mixin link;
+    }
+
+    #bar-toggle {
+      font-size: 18px;
+    }
+  }
+
+  #action-bar {
+    /* MACRO BAR */
+    #macro-list {
+      border: 0;
+
+      @mixin bordered-box;
+
+      box-shadow: $bg-shadow;
+      margin-top: 2px;
+      height: 96%;
+
+      li.macro {
+        box-shadow: none;
+
+        @mixin blurred-box;
+
+        border: 1px solid transparent;
+
+        &:not(:last-child) {
+          border-right: 1px solid rgba(255, 255, 255, 0.15);
         }
 
-        a#bar-toggle {
-          font-size: 18px;
+        &:hover {
+          border: 1px solid $color-accent-secondary;
+        }
+
+        span.macro-key {
+          text-shadow: $text-shadow;
+          color: $color-text-dim;
+          background-color: transparent;
+        }
+
+        &.active span.macro-key {
+          background-color: rgba($color-accent, 0.9);
         }
       }
+    }
 
-      nav#action-bar {
-        /* MACRO BAR */
-        ol#macro-list {
-          @mixin shadowed;
-          @mixin bordered;
+    /* LOCK ICON */
+    #hotbar-lock {
+      background: none;
+      border: 0;
+      box-shadow: none;
 
-          position: relative;
-          margin-top: 2px;
-          height: 96%;
+      a.page-control {
+        @mixin link;
+      }
+    }
 
-          li.macro {
-            @mixin reset;
-            @mixin blurred;
+    /* PAGE CONTROLS */
+    #hotbar-page-controls {
+      background: none;
+      border: 0;
+      box-shadow: none;
 
-            border: 1px solid transparent;
+      a.page-control {
+        @mixin link;
+      }
 
-            &:not(:last-child) {
-              border-right: 1px solid rgba(0, 0, 0, 0.4);
-            }
-
-            &:hover {
-              border: 1px solid $color-accent-secondary;
-            }
-
-            span.macro-key {
-              @mixin text-shadow;
-
-              color: $color-text-dim;
-              background-color: transparent;
-            }
-
-            &.active span.macro-key {
-              background-color: rgba($color-accent, 0.9);
-            }
-          }
-        }
-
-        /* LOCK ICON */
-        div#hotbar-lock {
-          @mixin reset;
-
-          a.page-control {
-            @mixin icon-button;
-          }
-        }
-
-        /* PAGE CONTROLS */
-        div#hotbar-page-controls {
-          @mixin reset;
-
-          a.page-control {
-            @mixin icon-button;
-          }
-
-          span.page-number {
-            @mixin text-shadow;
-
-            color: $color-text;
-          }
-        }
+      span.page-number {
+        text-shadow: $text-shadow;
+        color: $color-text;
       }
     }
   }

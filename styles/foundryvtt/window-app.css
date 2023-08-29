@@ -1,0 +1,39 @@
+.window-app {
+  /* HEADER */
+  .window-header {
+    h4 {
+      color: $color-text;
+      text-shadow: $text-shadow;
+    }
+
+    h4 a.document-id-link {
+      @mixin link $color-text-dim;
+    }
+
+    a.header-button {
+      @mixin link;
+    }
+  }
+
+  /* TARGET ALL SIDEBARS & MACROS POPOUT */
+  &#macros-popout,
+  &#chat-popout,
+  &#combat-popout,
+  &#scenes-popout,
+  &#actors-popout,
+  &#items-popout,
+  &#journal-popout,
+  &.journal-sheet,
+  &#tables-popout,
+  &#cards-popout,
+  &#playlists-popout,
+  &#compendium-popout,
+  &.Compendium-sidebar,
+  &#settings-popout {
+    background: none;
+
+    header.window-header {
+      background: url(/ui/denim075.png) repeat;
+    }
+  }
+}

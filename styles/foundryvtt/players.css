@@ -1,51 +1,36 @@
-#interface {
-  section#ui-left {
-    aside#players {
-      @mixin reset;
-      @mixin blurred;
-      @mixin shadowed;
-      @mixin bordered;
+#interface #ui-left #players {
+  background-image: none;
+  border: 0;
 
-      /* PLAYER TEXT-ICON BUTTON */
-      h3 {
-        @mixin text-shadow;
+  @mixin blurred-box;
+  @mixin bordered-box;
 
-        color: $color-text;
-        font-size: 16px;
-        border-bottom: 0;
-        cursor: pointer;
+  box-shadow: $bg-shadow;
 
-        &:hover {
-          color: $color-text-highlight;
-        }
+  /* PLAYER TEXT-ICON BUTTON */
+  h3 {
+    @mixin link;
 
-        i {
-          font-size: 14px;
-        }
+    font-size: 16px;
+    border-bottom: 0;
+    cursor: pointer;
 
-        i.players-mode {
-          color: $color-text;
-        }
+    i {
+      font-size: 14px;
+    }
+  }
 
-        &:hover i.players-mode {
-          color: $color-text-highlight;
-        }
-      }
+  /* PLAYERS LIST */
+  #player-list li.player {
+    cursor: context-menu;
 
-      /* PLAYERS LIST */
-      ol#player-list li.player {
-        cursor: context-menu;
+    &.context {
+      border-color: $color-accent-secondary;
+    }
 
-        &.context {
-          border-color: transparent;
-        }
-
-        span.player-name {
-          @mixin text-shadow;
-
-          color: $color-text-dim;
-        }
-      }
+    span.player-name {
+      text-shadow: $text-shadow;
+      color: $color-text-dim;
     }
   }
 }

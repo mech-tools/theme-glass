@@ -2,11 +2,16 @@
   "theme-glass": {
     "settings": {
       "enable-blur-name": "Blur effects (client)",
-      "enable-blur-hint": "⚠️ Activating this setting may cause a drop in performance. This setting is disabled by default for the Firefox browser, due to Firefox's poor performance management.",
+      "enable-blur-hint": "⚠️ Activating this setting may cause a drop in performance. This setting is disabled by default for the Firefox browser, due to Firefox's poor filters (blur) performance.",
       "collapse-hotbar-name": "Collapse hotbar (global)",
-      "collapse-hotbar-hint": "Collapse hotbar on startup. You may find this setting usefull if your party do not use macros.",
+      "collapse-hotbar-hint": "Collapses the hotbar on startup. You may find this setting usefull if your party do not use macros.",
       "no-pause-name": "Remove pause (global)",
-      "no-pause-hint": "Remove pause on startup. Only if a GM logged-in."
-    }
+      "no-pause-hint": "Removes the pause on startup. Only if a GM logs in.",
+      "hide-logo-name": "Hide logo (global)",
+      "hide-logo-hint": "Hides the FoundryVTT logo.",
+      "reduce-scene-list-name": "Scenes height (global)",
+      "reduce-scene-list-hint": "Reduces the height of scenes in the sidebar."
+    },
+    "blurWarningMessage": "⚠️ This module makes extensive use of blur effects. If you experience a drop in performance, you can click on the button below to disable the setting: \"Blur effects\"."
   }
 }

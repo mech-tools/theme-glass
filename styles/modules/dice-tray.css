@@ -1,0 +1,5 @@
+section.dice-tray {
+  button {
+    @mixin glass-button;
+  }
+}

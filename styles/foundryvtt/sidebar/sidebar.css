@@ -1,0 +1,23 @@
+#interface #ui-right #sidebar {
+  background-image: none;
+  box-shadow: none;
+  border: 0;
+
+  overflow: visible;
+
+  &.collapsed {
+    @mixin blurred-box;
+    @mixin bordered-box;
+
+    box-shadow: $bg-shadow;
+  }
+
+  /* ICONS CONTAINER */
+  section.tab.active {
+    @mixin blurred-box;
+    @mixin bordered-box;
+
+    box-shadow: $bg-shadow;
+    border-radius: 3px;
+  }
+}

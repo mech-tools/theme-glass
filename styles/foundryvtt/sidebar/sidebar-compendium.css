@@ -1,0 +1,40 @@
+#compendium-popout section.window-content section.compendium-sidebar,
+#interface #ui-right #sidebar #compendium {
+  ol.directory-list li.compendium {
+    /* TITLE */
+    h3.compendium-name {
+      border: 0;
+
+      text-shadow: $text-shadow;
+      transition: 0.5s;
+    }
+
+    /* BACKGROUND IMAGE */
+    img {
+      opacity: 0.75;
+    }
+
+    &.locked img {
+      opacity: 0.5;
+    }
+
+    &:hover img {
+      opacity: 1;
+    }
+
+    /* LOCK ICON */
+    div.status-icons i {
+      color: $color-text-dim;
+      transition: 0.5s;
+    }
+
+    &:hover div.status-icons i {
+      color: $color-text;
+    }
+
+    /* FOOTER */
+    compendium-footer {
+      color: $color-text;
+    }
+  }
+}

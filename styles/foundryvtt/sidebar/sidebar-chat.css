@@ -1,0 +1,52 @@
+#chat-popout section.window-content section.chat-sidebar,
+#interface #ui-right #sidebar #chat {
+  /* CHAT LOG */
+  #chat-log {
+    opacity: 0.9;
+  }
+
+  /* JUMP TO BOTTOM BUTTON */
+  div.jump-to-bottom a {
+    @mixin link;
+
+    i {
+      font-size: 11px;
+      margin-right: 5px;
+    }
+  }
+
+  /* CONTROLS */
+  #chat-controls {
+    > :last-child {
+      margin-right: 0;
+    }
+
+    label.chat-control-icon {
+      display: none;
+    }
+
+    select.roll-type-select {
+      margin-left: 0;
+
+      @mixin select;
+    }
+
+    div.control-buttons a i {
+      @mixin link $color-text-dim;
+
+      font-size: 13px;
+    }
+  }
+
+  /* TEXT FIELD */
+  #chat-form {
+    @mixin bordered-box;
+
+    padding: 1px;
+    border-radius: 3px;
+
+    #chat-message {
+      @mixin textarea;
+    }
+  }
+}

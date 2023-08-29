@@ -1,0 +1,21 @@
+#settings-popout section.window-content section.settings-sidebar,
+#interface #ui-right #sidebar #settings {
+  /* HEADERS */
+  h2 {
+    background-color: rgba($color-accent, 0.5);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  /* FIRST SECTION */
+  #game-details li {
+    color: $color-text;
+    text-shadow: $text-shadow;
+  }
+
+  /* BUTTONS LIST */
+  #settings-game button,
+  #settings-documentation button,
+  #settings-access button {
+    @mixin button;
+  }
+}

@@ -1,0 +1,117 @@
+#macros-popout section.window-content section.macros-sidebar,
+#combat-popout section.window-content section.combat-sidebar,
+#scenes-popout section.window-content section.scenes-sidebar,
+#actors-popout section.window-content section.actors-sidebar,
+#items-popout section.window-content section.items-sidebar,
+#journal-popout section.window-content section.journal-sidebar,
+.window-app.journal-sheet section.window-content div.journal-sheet-container aside.journal-sidebar,
+#tables-popout section.window-content section.tables-sidebar,
+#cards-popout section.window-content section.cards-sidebar,
+#playlists-popout section.window-content section.playlists-sidebar,
+#compendium-popout section.window-content section.compendium-sidebar,
+.window-app.Compendium-sidebar section.window-content div.compendium,
+#interface #ui-right #sidebar #combat,
+#interface #ui-right #sidebar #scenes,
+#interface #ui-right #sidebar #actors,
+#interface #ui-right #sidebar #items,
+#interface #ui-right #sidebar #journal,
+#interface #ui-right #sidebar #tables,
+#interface #ui-right #sidebar #cards,
+#interface #ui-right #sidebar #playlists,
+#interface #ui-right #sidebar #compendium {
+  header.directory-header {
+    /* HEADER FIRST PART */
+    div.header-actions {
+      &:not(:has(> *)) {
+        margin-top: 2px;
+      }
+
+      button {
+        @mixin button;
+      }
+    }
+
+    /* HEADER SECOND PART */
+    div.header-search {
+      a.header-control,
+      a.action-button {
+        &:first-child {
+          @mixin link;
+        }
+
+        &:not(:first-child) {
+          @mixin link $color-text-dim;
+        }
+      }
+
+      input {
+        @mixin text-input;
+      }
+    }
+  }
+
+  /* DIRECTORY LIST */
+  ol.directory-list {
+    opacity: 0.9;
+    padding: 0;
+
+    li.directory-item {
+      box-shadow: none;
+
+      border-top-color: rgba(0, 0, 0, 0.15);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+
+      &:not(:last-child) {
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+      }
+
+      &.active,
+      &.context {
+        box-shadow: none;
+
+        border-color: $color-accent-secondary;
+      }
+
+      &.document {
+        border-left: 0;
+        border-right: 0;
+      }
+
+      &.folder {
+        border-left: 0;
+
+        header {
+          border-top-color: transparent;
+          border-bottom-color: transparent;
+
+          h3 {
+            color: $color-text;
+            cursor: pointer;
+          }
+
+          a.create-button {
+            @mixin link;
+
+            i {
+              text-shadow: none;
+            }
+          }
+        }
+      }
+
+      h3.document-name a,
+      h4.document-name a {
+        @mixin link;
+      }
+
+      ol.subdirectory {
+        border-bottom: 0;
+
+        border-left-width: 10px;
+      }
+    }
+  }
+}

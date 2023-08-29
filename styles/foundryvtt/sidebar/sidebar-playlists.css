@@ -1,0 +1,59 @@
+#playlists-popout section.window-content section.playlists-sidebar,
+#interface #ui-right #sidebar #playlists {
+  /* HEADERS */
+  header.playlist-header {
+    text-decoration: none;
+
+    background-color: rgba($color-accent, 0.5);
+    border-color: rgba(0, 0, 0, 0.15);
+
+    h4 {
+      text-decoration: none;
+
+      @mixin link;
+    }
+  }
+
+  /* INDIVIDUAL ELEMENTS */
+  input[type="range"] {
+    margin: 0 6px;
+  }
+
+  i.volume-icon {
+    color: $color-text-dim;
+    text-shadow: $text-shadow;
+  }
+
+  a.sound-control {
+    @mixin link $color-text-dim;
+  }
+
+  a.sound-control[data-action="playlist-stop"],
+  a.sound-control[data-action="sound-stop"] {
+    @mixin link $color-accent-secondary;
+  }
+
+  li.sound h4 {
+    color: $color-text;
+    text-shadow: $text-shadow;
+  }
+
+  /* CURRENTLY PLAYING */
+  #currently-playing ol.playlist-sounds div.sound-playback div.sound-timer {
+    color: $color-text-dim;
+    text-shadow: $text-shadow;
+  }
+
+  /* PLAYLISTS */
+  ol.directory-list li.playlist {
+    padding: 0;
+
+    header.playlist-header {
+      padding: 4px 6px;
+    }
+
+    ol.playlist-sounds {
+      padding: 3px 6px 0 6px;
+    }
+  }
+}

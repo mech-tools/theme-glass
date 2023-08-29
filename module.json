@@ -46,5 +46,18 @@
   "download": "",
   "license": "",
   "readme": "",
-  "media": []
+  "media": [
+    {
+      "type": "cover",
+      "url": "https://raw.githubusercontent.com/DarKDinDoN/theme-glass/main/screenshot-1.jpg"
+    },
+    {
+      "type": "screenshot",
+      "url": "https://raw.githubusercontent.com/DarKDinDoN/theme-glass/main/screenshot-1.jpg"
+    },
+    {
+      "type": "screenshot",
+      "url": "https://raw.githubusercontent.com/DarKDinDoN/theme-glass/main/screenshot-2.jpg"
+    }
+  ]
 }

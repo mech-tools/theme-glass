@@ -1,5 +1,4 @@
 import { CONSTANTS } from "./shared/constants.js";
-import { isFF } from "./shared/helpers.js";
 
 /** Debounce calls before reloading page */
 const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 500);
@@ -8,7 +7,9 @@ const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 5
 export const SETTINGS = {
   ENABLE_BLUR: "enable-blur",
   COLLAPSE_HOTBAR: "collapse-hotbar",
-  NO_PAUSE: "no-pause"
+  NO_PAUSE: "no-pause",
+  HIDE_LOGO: "hide-logo",
+  REDUCE_SCENE_LIST: "reduce-scene-list"
 };
 
 /** Register settings */
@@ -19,7 +20,7 @@ export function registerSettings() {
     hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.ENABLE_BLUR}-hint`),
     scope: "client",
     config: true,
-    default: !isFF(),
+    default: true,
     type: Boolean,
     onChange: () => debouncedReload()
   });
@@ -39,6 +40,32 @@ export function registerSettings() {
   game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.NO_PAUSE, {
     name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.NO_PAUSE}-name`),
     hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.NO_PAUSE}-hint`),
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: () => debouncedReload()
+  });
+
+  // Hide logo Setting
+  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.HIDE_LOGO, {
+    name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.HIDE_LOGO}-name`),
+    hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.HIDE_LOGO}-hint`),
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: () => debouncedReload()
+  });
+
+  // Reduce scene list setting
+  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.REDUCE_SCENE_LIST, {
+    name: game.i18n.localize(
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.REDUCE_SCENE_LIST}-name`
+    ),
+    hint: game.i18n.localize(
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.REDUCE_SCENE_LIST}-hint`
+    ),
     scope: "world",
     config: true,
     default: false,

@@ -1,0 +1,90 @@
+/* ADD A BLUR BACKGROUND TO A BLOCK */
+@define-mixin blurred-box {
+  background-color: rgba(0, 0, 0, 0.05);
+
+  /* Only if blur setting is enabled */
+  body.shouldBlur & {
+    background-color: transparent;
+    backdrop-filter: $bg-blur;
+  }
+}
+
+/* ADD A BORDER TO A BLOCK */
+@define-mixin bordered-box {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0px;
+    mask-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1));
+    border: $bg-border;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+}
+
+/* CREATE ICON & TEXT LINK */
+@define-mixin link $color: $color-text {
+  color: $color;
+  text-shadow: $text-shadow;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    color: $color-text-highlight;
+  }
+
+  a:hover {
+    text-shadow: $text-shadow;
+  }
+
+  i {
+    color: $color;
+  }
+
+  &:hover i {
+    color: $color-text-highlight;
+  }
+}
+
+/* CREATE A BUTTON */
+@define-mixin button {
+  box-shadow: none;
+  text-shadow: none !important;
+
+  @mixin bordered-box;
+  @mixin link;
+
+  border: 1px solid transparent;
+  background-color: rgba($color-accent, 0.75);
+
+  &:hover {
+    border: 1px solid $color-accent-secondary;
+    text-shadow: none;
+  }
+
+  i {
+    text-shadow: none;
+  }
+}
+
+/* CREATE A TRANSPARENT BUTTON */
+@define-mixin glass-button {
+  @mixin blurred-box;
+  @mixin bordered-box;
+  @mixin link;
+
+  box-shadow: $bg-shadow;
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid $color-accent-secondary;
+  }
+
+  &.active {
+    background-color: rgba($color-accent, 0.75) !important;
+    border: 1px solid $color-accent-secondary;
+  }
+}

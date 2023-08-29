@@ -1,18 +1,18 @@
-#interface {
-  section#ui-left {
-    nav#controls {
-      margin-top: 100px;
-      padding-top: 10px;
+#interface #ui-left #controls {
+  padding-top: 10px;
 
-      /* MAIN LIST */
-      ol.main-controls li.scene-control {
-        @mixin button;
-      }
+  /* Only if hide logo setting is enabled */
+  body.hideLogo & {
+    margin-top: 100px;
+  }
 
-      /* SECONDARY LIST */
-      ol.sub-controls li.control-tool {
-        @mixin button;
-      }
-    }
+  /* MAIN LIST */
+  ol.main-controls li.scene-control {
+    @mixin glass-button;
+  }
+
+  /* SECONDARY LIST */
+  ol.sub-controls li.control-tool {
+    @mixin glass-button;
   }
 }

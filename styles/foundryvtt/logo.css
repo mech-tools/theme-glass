@@ -1,7 +1,8 @@
-#interface {
-  section#ui-left {
-    img#logo {
-      display: none;
-    }
+#interface #ui-left #logo {
+  opacity: 0.8;
+
+  /* Only if hide logo setting is enabled */
+  body.hideLogo & {
+    display: none;
   }
 }

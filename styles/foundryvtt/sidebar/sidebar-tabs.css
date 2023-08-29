@@ -1,0 +1,22 @@
+#interface #ui-right #sidebar #sidebar-tabs {
+  box-shadow: none;
+  border: 0;
+
+  margin-top: 10px;
+
+  /* ICONS LIST */
+  a.item {
+    @mixin link;
+
+    &.active {
+      box-shadow: none;
+      border: 0;
+
+      border-bottom: 2px solid $color-accent-secondary;
+    }
+  }
+
+  a.collapse {
+    @mixin link $color-text-dim;
+  }
+}

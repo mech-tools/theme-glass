@@ -1,8 +1,10 @@
 /* DEFINITIONS */
-@import "utils/mixins.css";
-@import "utils/form.css";
+@import "utils/base.css";
+@import "utils/components.css";
+@import "utils/fields.css";
 
 /* FVTT CORE */
+@import "foundryvtt/window-app.css";
 @import "foundryvtt/logo.css";
 @import "foundryvtt/pause.css";
 @import "foundryvtt/context-menu.css";
@@ -10,8 +12,17 @@
 @import "foundryvtt/navigation.css";
 @import "foundryvtt/players.css";
 @import "foundryvtt/hotbar.css";
-@import "foundryvtt/sidebar.css";
-@import "foundryvtt/sidebar-tabs.css";
-@import "foundryvtt/sidebar-chat.css";
-@import "foundryvtt/sidebar-combat.css";
-@import "foundryvtt/sidebar-scenes.css";
+@import "foundryvtt/journal.css";
+@import "foundryvtt/directories.css";
+@import "foundryvtt/sidebar/sidebar.css";
+@import "foundryvtt/sidebar/sidebar-tabs.css";
+@import "foundryvtt/sidebar/sidebar-chat.css";
+@import "foundryvtt/sidebar/sidebar-combat.css";
+@import "foundryvtt/sidebar/sidebar-playlists.css";
+@import "foundryvtt/sidebar/sidebar-compendium.css";
+@import "foundryvtt/sidebar/sidebar-settings.css";
+
+/* THIRD-PARTY MODULES */
+@import "modules/dice-tray.css";
+@import "modules/smalltime.css";
+@import "modules/simple-calendar.css";

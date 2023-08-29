@@ -1,0 +1,18 @@
+.window-app.journal-sheet section.window-content div.journal-sheet-container aside.journal-sidebar {
+  @mixin blurred-box;
+
+  ol.directory-list li.directory-item {
+    div.page-heading span.page-number {
+      text-shadow: $text-shadow;
+    }
+
+    div.page-heading span.page-title,
+    ol.headings li.heading {
+      @mixin link;
+    }
+  }
+
+  div.action-buttons button {
+    @mixin button;
+  }
+}

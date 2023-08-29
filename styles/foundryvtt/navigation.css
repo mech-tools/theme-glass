@@ -1,33 +1,24 @@
-#interface {
-  section#ui-middle {
-    header#ui-top {
-      margin-left: -206px;
+#interface #ui-middle #ui-top #navigation {
+  /* Only if hide logo setting is enabled */
+  body.hideLogo & {
+    margin-left: -115px;
+  }
 
-      nav#navigation {
-        /* TOGGLE BUTTON */
-        a#nav-toggle {
-          @mixin button;
-        }
+  /* TOGGLE BUTTON */
+  #nav-toggle {
+    @mixin glass-button;
+  }
 
-        /* SCENES LIST */
-        ol#scene-list li.nav-item {
-          @mixin button;
+  /* SCENES LIST */
+  #scene-list li.nav-item {
+    @mixin glass-button;
 
-          &.active {
-            border: 1px solid transparent;
-          }
+    &.active {
+      border: 1px solid transparent;
+    }
 
-          &.view {
-            border: 1px solid rgba($color-accent-secondary, 1);
-          }
-
-          a.scene-name:hover {
-            @mixin reset;
-
-            color: $color-text-highlight;
-          }
-        }
-      }
+    &.view {
+      border: 1px solid $color-accent-secondary;
     }
   }
 }

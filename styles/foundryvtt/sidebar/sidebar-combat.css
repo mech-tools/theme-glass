@@ -1,0 +1,64 @@
+#combat-popout section.window-content section.combat-sidebar,
+#interface #ui-right #sidebar #combat {
+  header.combat-tracker-header {
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+
+    /* HEADER FIRST PART */
+    nav.encounters {
+      a.combat-button {
+        @mixin link $color-text-dim;
+      }
+
+      h4.encounter {
+        color: $color-text-dim;
+        text-shadow: $text-shadow;
+        font-size: 16px;
+      }
+    }
+
+    /* HEADER SECOND PART */
+    div.encounter-controls {
+      a.combat-button {
+        @mixin link $color-text-dim;
+      }
+
+      h3.encounter-title {
+        color: $color-text;
+        text-shadow: $text-shadow;
+      }
+    }
+  }
+
+  /* CHARACTERS LIST */
+  #combat-tracker {
+    li.combatant {
+      div.token-name {
+        h4 {
+          color: $color-text;
+        }
+
+        div.combatant-controls a.combatant-control {
+          @mixin link $color-text-dim;
+        }
+
+        div.combatant-controls div.token-effects img {
+          border-radius: 3px;
+        }
+      }
+    }
+
+    div.token-initiative span.initiative {
+      color: $color-text;
+      text-shadow: $text-shadow;
+    }
+  }
+
+  /* FOOTER */
+  #combat-controls {
+    border-top-color: rgba(0, 0, 0, 0.3);
+
+    a.combat-control {
+      @mixin link;
+    }
+  }
+}

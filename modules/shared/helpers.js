@@ -7,9 +7,3 @@ import { CONSTANTS } from "./constants.js";
 export const logger = (msg) => {
   console.log(`${CONSTANTS.MODULE_TITLE} | ${msg}`);
 };
-
-/**
- * Check if the current browser is Firefox
- * @returns {boolean} is Firefox
- */
-export const isFF = () => navigator.userAgent.toLowerCase().indexOf("firefox") > -1;

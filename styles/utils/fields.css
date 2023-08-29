@@ -1,0 +1,72 @@
+/* TEXT INPUT FIELD */
+@define-mixin text-input {
+  background-color: rgba($color-accent, 0.5);
+  color: $color-text-dim;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
+
+  &::placeholder {
+    color: rgba($color-text-dim, 0.5);
+  }
+
+  &::-webkit-search-cancel-button {
+    filter: invert(1);
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-accent-secondary;
+  }
+
+  &:focus {
+    color: $color-text;
+  }
+}
+
+/* SELECT FIELD */
+@define-mixin select {
+  color: $color-text-dim;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba($color-accent, 0.5);
+  box-shadow: inset 0 0 3px $color-accent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-accent-secondary;
+  }
+
+  &:focus {
+    color: $color-text;
+  }
+
+  optgroup,
+  option {
+    color: $color-text-dim;
+    background-color: rgba($color-accent, 0.9);
+  }
+
+  option:hover {
+    color: $color-text-highlight;
+  }
+}
+
+/* TEXTAREA FIELD */
+@define-mixin textarea {
+  background-image: none;
+
+  background-color: rgba($color-accent, 0.5);
+  color: $color-text-dim;
+  border: 1px solid rgba($color-accent, 0.5);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-accent-secondary;
+  }
+
+  &:focus {
+    color: $color-text;
+  }
+}
