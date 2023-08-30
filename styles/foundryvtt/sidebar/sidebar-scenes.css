@@ -1,0 +1,8 @@
+#scenes-popout section.window-content section.scenes-sidebar,
+#interface #ui-right #sidebar #scenes {
+  ol.directory-list li.scene {
+    body.changeScenesHeight & {
+      --sidebar-scene-height: 75px;
+    }
+  }
+}
