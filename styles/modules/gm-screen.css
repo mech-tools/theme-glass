@@ -28,7 +28,7 @@ div.gm-screen-app {
     div.gm-screen-grid {
       /* CELL HEADERS */
       div.gm-screen-grid-cell-header {
-        opacity: 0.9;
+        opacity: 0.95;
 
         a {
           @mixin link $color-text-dim;
