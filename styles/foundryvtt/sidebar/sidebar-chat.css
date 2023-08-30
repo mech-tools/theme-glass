@@ -2,23 +2,23 @@
 #interface #ui-right #sidebar #chat {
   /* CHAT LOG */
   #chat-log {
+    body:not(.addChatOpacity) & {
+      opacity: 0.9;
+    }
+
     li.chat-message {
       transition: opacity 0.5s;
 
-      body:not(.addChatOpacity) & {
-        opacity: 0.9;
-      }
-
       /* Only if chat opacity is enabled */
       body.addChatOpacity &.opacity-delay {
-        opacity: 0.9;
+        opacity: 1;
       }
 
       body.addChatOpacity &.opacity-transition {
         opacity: 0.5;
 
         &:hover {
-          opacity: 0.9;
+          opacity: 1;
         }
       }
     }
