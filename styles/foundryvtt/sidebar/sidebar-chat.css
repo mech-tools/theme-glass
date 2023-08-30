@@ -2,7 +2,25 @@
 #interface #ui-right #sidebar #chat {
   /* CHAT LOG */
   #chat-log {
-    opacity: 0.9;
+    li.chat-message {
+      transition: opacity 0.5s;
+
+      body:not(.addChatOpacity) & {
+        opacity: 0.9;
+      }
+
+      body.addChatOpacity &.opacity-delay {
+        opacity: 0.9;
+      }
+
+      body.addChatOpacity &.opacity-transition {
+        opacity: 0.5;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
   }
 
   /* JUMP TO BOTTOM BUTTON */
