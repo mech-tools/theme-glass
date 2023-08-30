@@ -17,6 +17,10 @@
       border: 1px solid transparent;
     }
 
+    &:hover.active {
+      border: 1px solid $color-accent-secondary;
+    }
+
     &.view {
       border: 1px solid $color-accent-secondary;
     }
