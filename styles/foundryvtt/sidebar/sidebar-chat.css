@@ -9,6 +9,7 @@
         opacity: 0.9;
       }
 
+      /* Only if chat opacity is enabled */
       body.addChatOpacity &.opacity-delay {
         opacity: 0.9;
       }
