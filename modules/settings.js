@@ -6,6 +6,7 @@ const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 5
 /** Settings global names */
 export const SETTINGS = {
   ENABLE_BLUR: "enable-blur",
+  CHAT_OPACITY: "chat-opacity",
   COLLAPSE_HOTBAR: "collapse-hotbar",
   NO_PAUSE: "no-pause",
   HIDE_LOGO: "hide-logo",
@@ -19,6 +20,17 @@ export function registerSettings() {
     name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.ENABLE_BLUR}-name`),
     hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.ENABLE_BLUR}-hint`),
     scope: "client",
+    config: true,
+    default: true,
+    type: Boolean,
+    onChange: () => debouncedReload()
+  });
+
+  // Chat opacity Setting (Enabled by default, except for Firefox)
+  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY, {
+    name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY}-name`),
+    hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY}-hint`),
+    scope: "world",
     config: true,
     default: true,
     type: Boolean,

@@ -66,6 +66,29 @@ class ThemeGlass {
     }
   }
 
+  /* Applies a chat opacity */
+  static async chatOpacity() {
+    const chatOpacity = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY);
+    if (chatOpacity) {
+      document.body.classList.add("addChatOpacity");
+
+      // Add opacity to all existing chat cards
+      document
+        .querySelectorAll("#chat-log li.chat-message")
+        .forEach((e) => e.classList.add("opacity-transition"));
+
+      // Animation for all new chat cards
+      Hooks.on("renderChatMessage", async (message, html) => {
+        html[0].classList.add("opacity-delay");
+
+        await new Promise((r) => setTimeout(r, 10000)).then(() => {
+          html[0].classList.add("opacity-transition");
+          html[0].classList.remove("opacity-delay");
+        });
+      });
+    }
+  }
+
   /* Collapses macro hotbar */
   static collapseHotbar() {
     const collapseHotbar = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.COLLAPSE_HOTBAR);
@@ -104,6 +127,7 @@ Hooks.once("init", ThemeGlass.init);
 
 /* Fire the features */
 Hooks.once("ready", ThemeGlass.blurWarningMessage);
+Hooks.once("ready", ThemeGlass.chatOpacity);
 Hooks.once("ready", ThemeGlass.blurInterface);
 Hooks.once("renderHotbar", ThemeGlass.collapseHotbar);
 Hooks.once("ready", ThemeGlass.removePause);

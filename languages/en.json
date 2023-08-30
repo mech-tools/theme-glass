@@ -3,13 +3,15 @@
     "settings": {
       "enable-blur-name": "Blur effects (client)",
       "enable-blur-hint": "⚠️ Activating this setting may cause a drop in performance. This setting is disabled by default for the Firefox browser, due to Firefox's poor filters (blur) performance.",
-      "collapse-hotbar-name": "Collapse hotbar (global)",
+      "chat-opacity-name": "Chat opacity (world)",
+      "chat-opacity-hint": "If this setting is enabled, the chat cards will become transparent after a certain delay. Hover over a chat card will make it opaque again.",
+      "collapse-hotbar-name": "Collapse hotbar (world)",
       "collapse-hotbar-hint": "Collapses the hotbar on startup. You may find this setting usefull if your party do not use macros.",
-      "no-pause-name": "Remove pause (global)",
+      "no-pause-name": "Remove pause (world)",
       "no-pause-hint": "Removes the pause on startup. Only if a GM logs in.",
-      "hide-logo-name": "Hide logo (global)",
+      "hide-logo-name": "Hide logo (world)",
       "hide-logo-hint": "Hides the FoundryVTT logo.",
-      "reduce-scene-list-name": "Scenes height (global)",
+      "reduce-scene-list-name": "Scenes height (world)",
       "reduce-scene-list-hint": "Reduces the height of scenes in the sidebar."
     },
     "blurWarningMessage": "⚠️ This module makes extensive use of blur effects. If you experience a drop in performance, you can click on the button below to disable the setting: \"Blur effects\"."
