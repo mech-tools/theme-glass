@@ -1,6 +1,6 @@
 .window-app {
   /* HEADER */
-  .window-header {
+  header.window-header {
     h4 {
       color: $color-text;
       text-shadow: $text-shadow;
@@ -15,6 +15,11 @@
     }
   }
 
+  /* CONTENT */
+  section.window-content {
+    opacity: 0.8;
+  }
+
   /* TARGET ALL SIDEBARS & MACROS POPOUT */
   &#macros-popout,
   &#chat-popout,
@@ -23,7 +28,6 @@
   &#actors-popout,
   &#items-popout,
   &#journal-popout,
-  &.journal-sheet,
   &#tables-popout,
   &#cards-popout,
   &#playlists-popout,
@@ -31,6 +35,10 @@
   &.Compendium-sidebar,
   &#settings-popout {
     background: none;
+
+    section.window-content {
+      opacity: 1;
+    }
 
     header.window-header {
       background: url(/ui/denim075.png) repeat;
