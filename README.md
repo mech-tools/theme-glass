@@ -39,12 +39,12 @@ It was created with this in mind, but some systems use their own theme. For thes
 
 Depending on the work load, I can make certain modules compatible with this theme.
 
-| Module name                                                                                 | Compatibility | Comment                               |
-| ------------------------------------------------------------------------------------------- | ------------- | ------------------------------------- |
-| [Dice Tray](https://gitlab.com/asacolips-projects/foundry-mods/foundry-vtt-dice-calculator) | ✅            | OK, but over colors are still vanilla |
-| [GM Screen](https://github.com/ElfFriend-DnD/foundryvtt-gmScreen)                           | ✅            | OK                                    |
-| [Simple Calendar](https://github.com/vigoren/foundryvtt-simple-calendar)                    | ✅            | Only opacity                          |
-| [SmallTime](https://github.com/unsoluble/smalltime)                                         | ✅            | Only opacity                          |
+| Module name                                                                                 | Compatibility | Comment                                |
+| ------------------------------------------------------------------------------------------- | ------------- | -------------------------------------- |
+| [Dice Tray](https://gitlab.com/asacolips-projects/foundry-mods/foundry-vtt-dice-calculator) | ✅            | OK, but hover colors are still vanilla |
+| [GM Screen](https://github.com/ElfFriend-DnD/foundryvtt-gmScreen)                           | ✅            | OK                                     |
+| [Simple Calendar](https://github.com/vigoren/foundryvtt-simple-calendar)                    | ✅            | Only opacity                           |
+| [SmallTime](https://github.com/unsoluble/smalltime)                                         | ✅            | Only opacity                           |
 
 ### Why are some windows not transparent?
 
