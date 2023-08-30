@@ -1,0 +1,69 @@
+div.gm-screen-app {
+  /* HEADER BUTTONS */
+  div.gm-screen-actions {
+    button,
+    .gm-screen-tabs button,
+    .meta-actions button {
+      background: none;
+
+      @mixin glass-button;
+
+      &:hover,
+      &.active {
+        border-bottom-color: transparent;
+        text-shadow: $text-shadow;
+      }
+    }
+  }
+
+  div.gm-screen-container {
+    background: none;
+
+    background-color: rgba($color-accent, 0.75);
+
+    div.gm-screen-grid {
+      /* CELL HEADERS */
+      div.gm-screen-grid-cell-header {
+        opacity: 0.9;
+
+        a {
+          @mixin link $color-text-dim;
+        }
+
+        h5 {
+          color: $color-text;
+          text-shadow: $text-shadow;
+        }
+      }
+
+      /* CELL WITH CONTENT */
+      div.gm-screen-grid-cell[data-entity-uuid] {
+        div.gm-screen-grid-cell-content-wrapper {
+          opacity: 0.9;
+          background: url(/ui/parchment.jpg) repeat;
+        }
+      }
+
+      /* CELL WITHOUT CONTENT */
+      div.gm-screen-grid-cell-content {
+        border-color: $color-text-dim;
+
+        div.gm-screen-grid-cell-hint {
+          color: $color-text-dim;
+          border-color: $color-text-dim;
+        }
+
+        /* Fix for journal headers */
+        > header.journal-page-header {
+          flex: unset !important;
+          height: auto !important;
+        }
+      }
+    }
+  }
+
+  /* REMOVE REZISE WINDOW BUTTON */
+  &.gm-screen-drawer div.window-resizable-handle {
+    display: none;
+  }
+}
