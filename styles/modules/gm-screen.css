@@ -13,6 +13,10 @@ div.gm-screen-app {
         border-bottom-color: transparent;
         text-shadow: $text-shadow;
       }
+
+      &:not(.active) {
+        background-color: transparent;
+      }
     }
   }
 
