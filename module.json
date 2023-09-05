@@ -19,12 +19,12 @@
   "conflicts": [],
   "socket": true,
   "scripts": [],
-  "esmodules": ["./modules/module.js"],
-  "styles": ["styles/build/theme-glass.css"],
+  "esmodules": ["./build/theme-glass.js"],
+  "styles": ["./build/theme-glass.css"],
   "flags": {
     "hotReload": {
       "extensions": ["css"],
-      "paths": ["styles/build/theme-glass.css"]
+      "paths": ["build/theme-glass.css"]
     }
   },
   "languages": [
