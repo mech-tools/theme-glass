@@ -15,7 +15,8 @@
       }
 
       body.addChatOpacity &.opacity-transition {
-        opacity: 0.5;
+        /* Set in the module settings */
+        opacity: var(--chat-opactity-value);
 
         &:hover {
           opacity: 1;

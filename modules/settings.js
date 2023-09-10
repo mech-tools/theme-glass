@@ -7,6 +7,8 @@ const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 5
 export const SETTINGS = {
   ENABLE_BLUR: "enable-blur",
   CHAT_OPACITY: "chat-opacity",
+  CHAT_OPACITY_VALUE: "chat-opacity-value",
+  CHAT_OPACITY_TIMER: "chat-opacity-timer",
   COLLAPSE_HOTBAR: "collapse-hotbar",
   NO_PAUSE: "no-pause",
   HIDE_LOGO: "hide-logo",
@@ -15,7 +17,7 @@ export const SETTINGS = {
 
 /** Register settings */
 export function registerSettings() {
-  // Blur Setting (Enabled by default, except for Firefox)
+  // Blur Setting
   game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.ENABLE_BLUR, {
     name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.ENABLE_BLUR}-name`),
     hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.ENABLE_BLUR}-hint`),
@@ -26,7 +28,7 @@ export function registerSettings() {
     onChange: () => debouncedReload()
   });
 
-  // Chat opacity Setting (Enabled by default, except for Firefox)
+  // Chat opacity Setting
   game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY, {
     name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY}-name`),
     hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY}-hint`),
@@ -34,6 +36,46 @@ export function registerSettings() {
     config: true,
     default: true,
     type: Boolean,
+    onChange: () => debouncedReload()
+  });
+
+  // Chat opacity value Setting
+  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY_VALUE, {
+    name: game.i18n.localize(
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY_VALUE}-name`
+    ),
+    hint: game.i18n.localize(
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY_VALUE}-hint`
+    ),
+    scope: "world",
+    config: true,
+    default: 0.5,
+    range: {
+      min: 0.25,
+      max: 0.75,
+      step: 0.25
+    },
+    type: Number,
+    onChange: () => debouncedReload()
+  });
+
+  // Chat cards opacity timer Setting
+  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY_TIMER, {
+    name: game.i18n.localize(
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY_TIMER}-name`
+    ),
+    hint: game.i18n.localize(
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY_TIMER}-hint`
+    ),
+    scope: "world",
+    config: true,
+    default: 10,
+    range: {
+      min: 1,
+      max: 30,
+      step: 1
+    },
+    type: Number,
     onChange: () => debouncedReload()
   });
 
