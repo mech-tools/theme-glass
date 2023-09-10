@@ -2,7 +2,7 @@
   "theme-glass": {
     "settings": {
       "enable-blur-name": "Blur effects (client)",
-      "enable-blur-hint": "⚠️ Activating this setting may cause a drop in performance. This setting is disabled by default for the Firefox browser, due to Firefox's poor filters (blur) performance.",
+      "enable-blur-hint": "⚠️ Activating this setting may cause a drop in performance.",
       "chat-opacity-name": "Chat opacity (world)",
       "chat-opacity-hint": "If this setting is enabled, the chat cards will become transparent after a certain delay. Hover over a chat card will make it opaque again.",
       "chat-opacity-value-name": "Chat opacity value (world)",
