@@ -1,4 +1,5 @@
 import { CONSTANTS } from "../shared/constants.js";
+import { HideInterfaceSetting } from "./HideInterfaceSetting.js";
 
 /** Debounce calls before reloading page */
 const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 500);
@@ -11,8 +12,9 @@ export const SETTINGS = {
   CHAT_OPACITY_TIMER: "chat-opacity-timer",
   COLLAPSE_HOTBAR: "collapse-hotbar",
   NO_PAUSE: "no-pause",
-  HIDE_LOGO: "hide-logo",
-  REDUCE_SCENE_LIST: "reduce-scene-list"
+  REDUCE_SCENE_LIST: "reduce-scene-list",
+  HIDE_INTERFACE_FORM: "hide-interface-form",
+  HIDE_INTERFACE_VALUES: "hide-interface-values"
 };
 
 /** Register settings */
@@ -101,17 +103,6 @@ export function registerSettings() {
     onChange: () => debouncedReload()
   });
 
-  // Hide logo Setting
-  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.HIDE_LOGO, {
-    name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.HIDE_LOGO}-name`),
-    hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.HIDE_LOGO}-hint`),
-    scope: "world",
-    config: true,
-    default: false,
-    type: Boolean,
-    onChange: () => debouncedReload()
-  });
-
   // Reduce scene list setting
   game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.REDUCE_SCENE_LIST, {
     name: game.i18n.localize(
@@ -126,4 +117,7 @@ export function registerSettings() {
     type: Boolean,
     onChange: () => debouncedReload()
   });
+
+  // Hide interface settings window
+  HideInterfaceSetting.register();
 }

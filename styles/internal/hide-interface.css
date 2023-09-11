@@ -1,0 +1,70 @@
+/* LEFT UI FIX */
+#ui-left {
+  min-width: 220px;
+}
+
+/* LOGO */
+body.hideLogo {
+  #logo {
+    display: none !important;
+  }
+
+  /* Move controls down */
+  #controls {
+    margin-top: 110px;
+  }
+
+  /* Move navigation left */
+  #ui-top {
+    margin-left: -205px;
+  }
+}
+
+/* NAVIGATION */
+body.hideNavigation #navigation {
+  display: none !important;
+}
+
+/* CONTROLS */
+body.hideControls {
+  #controls {
+    display: none !important;
+  }
+
+  /* Keep the players interface at the bottom */
+  #players {
+    margin-top: auto;
+  }
+}
+
+/* PLAYERS */
+body.hidePlayers {
+  #players {
+    display: none !important;
+  }
+
+  /* Move hotbar left */
+  #ui-bottom {
+    margin-left: -216px;
+  }
+}
+
+/* HOTBAR */
+body.hideHotbar #hotbar {
+  display: none !important;
+}
+
+/* SIDEBAR TABS */
+body.hideChat #sidebar-tabs a[data-tab="chat"],
+body.hideCombat #sidebar-tabs a[data-tab="combat"],
+body.hideScenes #sidebar-tabs a[data-tab="scenes"],
+body.hideActors #sidebar-tabs a[data-tab="actors"],
+body.hideItems #sidebar-tabs a[data-tab="items"],
+body.hideJournal #sidebar-tabs a[data-tab="journal"],
+body.hideTables #sidebar-tabs a[data-tab="tables"],
+body.hideCards #sidebar-tabs a[data-tab="cards"],
+body.hidePlaylists #sidebar-tabs a[data-tab="playlists"],
+body.hideCompendium #sidebar-tabs a[data-tab="compendium"],
+body.hideSettings #sidebar-tabs a[data-tab="settings"] {
+  display: none !important;
+}

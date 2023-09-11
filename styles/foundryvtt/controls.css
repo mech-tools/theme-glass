@@ -1,11 +1,6 @@
 #interface #ui-left #controls {
   padding-top: 10px;
 
-  /* Only if hide logo setting is enabled */
-  body.hideLogo & {
-    margin-top: 100px;
-  }
-
   /* MAIN LIST */
   ol.main-controls li.scene-control {
     @mixin glass-button;

@@ -1,28 +1,9 @@
 #chat-popout section.window-content section.chat-sidebar,
 #interface #ui-right #sidebar #chat {
   /* CHAT LOG */
-  #chat-log {
-    body:not(.addChatOpacity) & {
-      opacity: 0.9;
-    }
-
-    li.chat-message {
-      transition: opacity 0.5s;
-
-      /* Only if chat opacity is enabled */
-      body.addChatOpacity &.opacity-delay {
-        opacity: 1;
-      }
-
-      body.addChatOpacity &.opacity-transition {
-        /* Set in the module settings */
-        opacity: var(--chat-opactity-value);
-
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
+  #chat-log li.chat-message {
+    opacity: 0.9;
+    transition: opacity 0.5s;
   }
 
   /* JUMP TO BOTTOM BUTTON */

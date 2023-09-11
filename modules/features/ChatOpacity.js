@@ -13,6 +13,9 @@ export class ChatOpacity extends BaseFeature {
   hookName = "ready";
 
   /** @override */
+  once = true;
+
+  /** @override */
   fireFeature() {
     document.body.classList.add("addChatOpacity");
     document.documentElement.style.setProperty(

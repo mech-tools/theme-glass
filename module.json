@@ -23,8 +23,8 @@
   "styles": ["./build/theme-glass.css"],
   "flags": {
     "hotReload": {
-      "extensions": ["css"],
-      "paths": ["build/theme-glass.css"]
+      "extensions": ["css", "hbs"],
+      "paths": ["build/theme-glass.css", "templates/*.hbs"]
     }
   },
   "languages": [

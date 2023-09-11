@@ -11,7 +11,10 @@ export class BlurInterface extends BaseFeature {
   hookName = "ready";
 
   /** @override */
+  once = true;
+
+  /** @override */
   fireFeature() {
-    document.body.classList.add("shouldBlur");
+    document.body.classList.add("addBlur");
   }
 }

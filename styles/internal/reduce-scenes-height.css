@@ -1,0 +1,4 @@
+/* REDUCE SCENES HEIGHT */
+body.reduceScenesHeight #scenes ol.directory-list li.scene {
+  --sidebar-scene-height: 75px;
+}

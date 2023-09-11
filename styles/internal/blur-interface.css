@@ -1,0 +1,9 @@
+/* BLUR INTERFACE (OVERRIDE COMPONENT MIXIN) */
+@define-mixin transparent-box {
+  background-color: rgba(0, 0, 0, 0.05);
+
+  body.addBlur & {
+    background-color: transparent;
+    backdrop-filter: $bg-blur;
+  }
+}

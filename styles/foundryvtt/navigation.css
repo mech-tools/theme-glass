@@ -1,9 +1,4 @@
 #interface #ui-middle #ui-top #navigation {
-  /* Only if hide logo setting is enabled */
-  body.hideLogo & {
-    margin-left: -115px;
-  }
-
   /* TOGGLE BUTTON */
   #nav-toggle {
     @mixin glass-button;

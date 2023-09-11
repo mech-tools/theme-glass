@@ -3,7 +3,7 @@ import {
   BlurWarningMessage,
   ChatOpacity,
   CollapseHotbar,
-  HideLogo,
+  HideInterface,
   ReduceScenesHeight,
   RemovePause
 } from "./features/index.js";
@@ -42,13 +42,13 @@ new (class ThemeGlass {
    */
   loadFeatures() {
     [
-      new BlurWarningMessage(),
       new BlurInterface(),
+      new BlurWarningMessage(),
       new ChatOpacity(),
       new CollapseHotbar(),
-      new RemovePause(),
-      new HideLogo(),
-      new ReduceScenesHeight()
+      new HideInterface(),
+      new ReduceScenesHeight(),
+      new RemovePause()
     ].forEach((f) => f.onHook());
   }
 })();

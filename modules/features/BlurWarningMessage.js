@@ -12,6 +12,9 @@ export class BlurWarningMessage extends BaseFeature {
   hookName = "ready";
 
   /** @override */
+  once = true;
+
+  /** @override */
   fireFeature() {
     // Listener
     document.body.addEventListener("click", async (event) => {

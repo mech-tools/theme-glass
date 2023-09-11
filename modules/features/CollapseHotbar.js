@@ -11,6 +11,9 @@ export class CollapseHotbar extends BaseFeature {
   hookName = "renderHotbar";
 
   /** @override */
+  once = true;
+
+  /** @override */
   fireFeature() {
     ui.hotbar.collapse();
   }

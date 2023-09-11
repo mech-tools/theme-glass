@@ -11,6 +11,9 @@ export class RemovePause extends BaseFeature {
   hookName = "ready";
 
   /** @override */
+  once = true;
+
+  /** @override */
   fireFeature() {
     if (game.users.current.isGM && game.paused) {
       game.togglePause(false, true);

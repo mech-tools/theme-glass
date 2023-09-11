@@ -13,10 +13,15 @@
       "collapse-hotbar-hint": "Collapses the hotbar on startup. You may find this setting usefull if your party do not use macros.",
       "no-pause-name": "Remove pause (world)",
       "no-pause-hint": "Removes the pause on startup. Only if a GM logs in.",
-      "hide-logo-name": "Hide logo (world)",
-      "hide-logo-hint": "Hides the FoundryVTT logo.",
       "reduce-scene-list-name": "Scenes height (world)",
-      "reduce-scene-list-hint": "Reduces the height of scenes in the sidebar."
+      "reduce-scene-list-hint": "Reduces the height of scenes in the sidebar.",
+      "hide-interface-form": {
+        "menu": "Hide interface components (world)",
+        "title": "List of interface components",
+        "how-to": "Uncheck the components you wish to hide from the players and/or the GM.",
+        "logo": "FoundryVTT logo",
+        "navigation": "Scenes navigation"
+      }
     },
     "blurWarningMessage": "⚠️ This module makes extensive use of blur effects. If you experience a drop in performance, you can click on the button below to disable the setting: \"Blur effects\"."
   }

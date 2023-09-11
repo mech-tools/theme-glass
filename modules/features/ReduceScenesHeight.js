@@ -1,4 +1,4 @@
-import BaseFeature from "./BaseFeature.js";
+import BaseFeature from "./BaseFeature";
 
 /**
  * Reduces scenes height
@@ -8,10 +8,10 @@ export class ReduceScenesHeight extends BaseFeature {
   settingName = "REDUCE_SCENE_LIST";
 
   /** @override */
-  hookName = "ready";
+  hookName = "renderSceneDirectory";
 
   /** @override */
   fireFeature() {
-    document.body.classList.add("changeScenesHeight");
+    document.body.classList.add("reduceScenesHeight");
   }
 }

@@ -29,7 +29,7 @@
       li.macro {
         box-shadow: none;
 
-        @mixin blurred-box;
+        @mixin transparent-box;
 
         border: 1px solid transparent;
 

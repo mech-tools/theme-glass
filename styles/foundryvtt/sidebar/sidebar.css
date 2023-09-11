@@ -6,7 +6,7 @@
   overflow: visible;
 
   &.collapsed {
-    @mixin blurred-box;
+    @mixin transparent-box;
     @mixin bordered-box;
 
     box-shadow: $bg-shadow;
@@ -14,7 +14,7 @@
 
   /* ICONS CONTAINER */
   section.tab.active {
-    @mixin blurred-box;
+    @mixin transparent-box;
     @mixin bordered-box;
 
     box-shadow: $bg-shadow;

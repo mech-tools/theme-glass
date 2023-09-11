@@ -11,6 +11,11 @@ export default class BaseFeature {
   hookName = "";
 
   /**
+   * @param {string} once hook recurrence
+   */
+  once = false;
+
+  /**
    * @param {null|boolean} byPassSetting if the setting check should be bypass
    */
   byPassSetting = null;
@@ -29,13 +34,14 @@ export default class BaseFeature {
       throw new Error("Missing hook definition");
     }
 
-    Hooks.once(this.hookName, this.handle.bind(this));
+    Hooks.on(this.hookName, this.handle.bind(this), { once: this.once });
   }
 
   /**
    * Handle the firing of the feature
+   * @param {...any} args args passed by the hook
    */
-  handle() {
+  handle(...args) {
     // Check setting
     this.setting =
       this.byPassSetting ?? game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS[this.settingName]);
@@ -43,11 +49,12 @@ export default class BaseFeature {
     if (!this.setting) return;
 
     // Fire feature
-    this.fireFeature();
+    this.fireFeature(...args);
   }
 
   /**
    * Feature will be fired if setting is truthy or bypassed
+   * @param {...any} args args passed by the hook
    */
-  fireFeature() {}
+  fireFeature(...args) {}
 }

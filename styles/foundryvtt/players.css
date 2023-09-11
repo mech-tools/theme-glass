@@ -2,7 +2,7 @@
   background-image: none;
   border: 0;
 
-  @mixin blurred-box;
+  @mixin transparent-box;
   @mixin bordered-box;
 
   box-shadow: $bg-shadow;

@@ -1,0 +1,14 @@
+/* CHAT LOG OPACITY */
+body.addChatOpacity #chat-log li.chat-message {
+  &.opacity-delay {
+    opacity: 1 !important;
+  }
+
+  &.opacity-transition {
+    opacity: var(--chat-opactity-value) !important;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+}
