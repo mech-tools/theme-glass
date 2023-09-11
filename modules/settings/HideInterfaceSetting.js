@@ -15,20 +15,20 @@ export class HideInterfaceSetting extends FormApplication {
     navigation: game.i18n.localize(
       `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.HIDE_INTERFACE_FORM}.navigation`
     ),
-    controls: game.i18n.localize("CONTROLS.HeaderGame"),
-    players: game.i18n.localize("PLAYERS.List"),
+    controls: game.i18n.localize("CONTROLS.NavLabel"),
+    players: game.i18n.localize("PLAYERS.Title"),
     hotbar: game.i18n.localize("DOCUMENT.Macros"),
-    chat: game.i18n.localize("DOCUMENT.ChatMessages"),
-    combat: game.i18n.localize("COMBAT.SidebarTitle"),
-    scenes: game.i18n.localize("DOCUMENT.Scenes"),
-    actors: game.i18n.localize("DOCUMENT.Actors"),
-    items: game.i18n.localize("DOCUMENT.Items"),
-    journal: game.i18n.localize("SIDEBAR.TabJournal"),
-    tables: game.i18n.localize("SIDEBAR.TabTables"),
-    cards: game.i18n.localize("DOCUMENT.Cards"),
-    playlists: game.i18n.localize("DOCUMENT.Playlists"),
-    compendium: game.i18n.localize("SIDEBAR.TabCompendium"),
-    settings: game.i18n.localize("SIDEBAR.TabSettings")
+    chat: game.i18n.localize("THESIDEBAR.ChatLogTitle"),
+    combat: game.i18n.localize("THESIDEBAR.CombatTrackerTitle"),
+    scenes: game.i18n.localize("THESIDEBAR.ScenesTitle"),
+    actors: game.i18n.localize("THESIDEBAR.ActorDirectoryTitle"),
+    items: game.i18n.localize("THESIDEBAR.ItemDirectoryTitle"),
+    journal: game.i18n.localize("THESIDEBAR.JournalEntryTitle"),
+    tables: game.i18n.localize("THESIDEBAR.RollableTablesTitle"),
+    cards: game.i18n.localize("THESIDEBAR.CardStacksTitle"),
+    playlists: game.i18n.localize("THESIDEBAR.PlaylistsTitle"),
+    compendium: game.i18n.localize("THESIDEBAR.CompendiumPacksTitle"),
+    settings: game.i18n.localize("THESIDEBAR.SettingsTitle")
   };
 
   /**

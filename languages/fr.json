@@ -16,7 +16,7 @@
       "reduce-scene-list-name": "Taille des scènes (global)",
       "reduce-scene-list-hint": "Réduit la taille des scènes dans la liste de la barre latérale.",
       "hide-interface-form": {
-        "menu": "Cacher des composants de l'interface (global)",
+        "menu": "Cacher des composants (global)",
         "title": "Liste des composants de l'interface",
         "how-to": "Cocher uniquement les composants que vous souhaitez garder afficher pour les joueurs et ou les GM.",
         "logo": "Logo FoundryVTT",
