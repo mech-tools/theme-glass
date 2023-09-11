@@ -1,5 +1,5 @@
-import { CONSTANTS } from "../shared/constants";
-import BaseFeature from "./BaseFeature";
+import { CONSTANTS } from "../shared/constants.js";
+import BaseFeature from "./BaseFeature.js";
 
 /**
  * Create a warning message for blurred content

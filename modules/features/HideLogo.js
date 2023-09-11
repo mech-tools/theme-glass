@@ -1,4 +1,4 @@
-import BaseFeature from "./BaseFeature";
+import BaseFeature from "./BaseFeature.js";
 
 /**
  * Hides the fvtt logo

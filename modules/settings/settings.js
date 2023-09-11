@@ -1,4 +1,4 @@
-import { CONSTANTS } from "./shared/constants.js";
+import { CONSTANTS } from "../shared/constants.js";
 
 /** Debounce calls before reloading page */
 const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 500);

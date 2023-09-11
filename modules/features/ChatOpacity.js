@@ -1,6 +1,6 @@
-import { SETTINGS } from "../settings";
-import { CONSTANTS } from "../shared/constants";
-import BaseFeature from "./BaseFeature";
+import { SETTINGS } from "../settings/settings.js";
+import { CONSTANTS } from "../shared/constants.js";
+import BaseFeature from "./BaseFeature.js";
 
 /**
  * Applies a chat opacity

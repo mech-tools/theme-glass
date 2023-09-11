@@ -1,5 +1,5 @@
-import { SETTINGS } from "../settings";
-import { CONSTANTS } from "../shared/constants";
+import { SETTINGS } from "../settings/settings.js";
+import { CONSTANTS } from "../shared/constants.js";
 
 /**
  * Abstract feature

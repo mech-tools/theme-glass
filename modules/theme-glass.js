@@ -7,7 +7,7 @@ import {
   ReduceScenesHeight,
   RemovePause
 } from "./features/index.js";
-import { registerSettings } from "./settings.js";
+import { registerSettings } from "./settings/settings.js";
 import { logger } from "./shared/helpers.js";
 
 /**
