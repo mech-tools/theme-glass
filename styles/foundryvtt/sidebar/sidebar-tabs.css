@@ -1,27 +1,33 @@
-#interface #ui-right #sidebar #sidebar-tabs {
-  box-shadow: none;
-  border: 0;
-
-  margin-top: 10px;
-  justify-content: flex-end;
-
-  a {
-    margin: 0 0.5px;
+#interface #ui-right #sidebar {
+  &:not(.collapsed) #sidebar-tabs a.collapse {
+    margin-left: auto;
   }
 
-  /* ICONS LIST */
-  a.item {
-    @mixin link;
+  #sidebar-tabs {
+    box-shadow: none;
+    border: 0;
 
-    &.active {
-      box-shadow: none;
-      border: 0;
+    margin-top: 10px;
+    justify-content: flex-start;
 
-      border-bottom: 2px solid $color-accent-secondary;
+    a {
+      margin: 0 0.5px;
     }
-  }
 
-  a.collapse {
-    @mixin link $color-text-dim;
+    /* ICONS LIST */
+    a.item {
+      @mixin link;
+
+      &.active {
+        box-shadow: none;
+        border: 0;
+
+        border-bottom: 2px solid $color-accent-secondary;
+      }
+    }
+
+    a.collapse {
+      @mixin link $color-text-dim;
+    }
   }
 }
