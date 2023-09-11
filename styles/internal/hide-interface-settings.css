@@ -10,6 +10,7 @@
     flex-shrink: initial;
     flex-grow: initial;
     font-weight: bold;
+    text-wrap: nowrap;
 
     &.push-right {
       margin-left: auto;
