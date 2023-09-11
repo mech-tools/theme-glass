@@ -38,7 +38,8 @@
     color: $color;
   }
 
-  &:hover i {
+  &:hover i,
+  &.active i {
     color: $color-text-highlight;
   }
 }
