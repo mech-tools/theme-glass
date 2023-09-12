@@ -9,9 +9,9 @@ body.hideLogo {
     display: none !important;
   }
 
-  /* Move controls down */
-  #controls {
-    margin-top: 110px;
+  /* Preserve top spacing */
+  #ui-left {
+    margin-top: 125px;
   }
 
   /* Move navigation left */
@@ -43,6 +43,11 @@ body.hidePlayers {
     display: none !important;
   }
 
+  /* Preserve bottom spacing */
+  #ui-left {
+    margin-bottom: 65px;
+  }
+
   /* Move hotbar left */
   #ui-bottom {
     margin-left: -216px;
@@ -50,8 +55,15 @@ body.hidePlayers {
 }
 
 /* HOTBAR */
-body.hideHotbar #hotbar {
-  display: none !important;
+body.hideHotbar {
+  #hotbar {
+    display: none !important;
+  }
+
+  /* No need to preserve spacing if hidden */
+  #ui-left {
+    margin-bottom: 0;
+  }
 }
 
 /* SIDEBAR TABS */

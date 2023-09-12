@@ -1,3 +1,14 @@
-#smalltime-app:hover {
-  opacity: 0.8;
+#smalltime-app {
+  &:hover {
+    opacity: 0.9;
+  }
+
+  /* If interface is hidden, keep it at the bottom */
+  &.pinned {
+    margin-top: auto;
+
+    & + #players {
+      margin-top: initial;
+    }
+  }
 }
