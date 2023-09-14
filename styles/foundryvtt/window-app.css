@@ -16,7 +16,7 @@
   }
 
   /* CONTENT */
-  section.window-content {
+  &:not(.image-popout) section.window-content {
     opacity: 0.9;
   }
 
