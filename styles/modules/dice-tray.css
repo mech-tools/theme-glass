@@ -3,7 +3,3 @@ section.dice-tray {
     @mixin glass-button;
   }
 }
-
-#chat:has(section.dice-tray) div.jump-to-bottom {
-  bottom: 204px;
-}
