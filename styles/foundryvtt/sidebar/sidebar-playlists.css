@@ -29,7 +29,8 @@
   }
 
   a.sound-control[data-action="playlist-stop"],
-  a.sound-control[data-action="sound-stop"] {
+  a.sound-control[data-action="sound-stop"],
+  a.sound-control:not(.inactive)[data-action="sound-repeat"] {
     @mixin link $color-accent-secondary;
   }
 
