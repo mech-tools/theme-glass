@@ -22,12 +22,12 @@
         box-shadow: none;
         border: 0;
 
-        border-bottom: 2px solid $color-accent-secondary;
+        border-bottom: 2px solid rgb($color-secondary);
       }
     }
 
     a.collapse {
-      @mixin link $color-text-dim;
+      @mixin link rgb($color-text-dim);
     }
   }
 }

@@ -38,17 +38,17 @@
         }
 
         &:hover {
-          border: 1px solid $color-accent-secondary;
+          border: 1px solid rgb($color-secondary);
         }
 
         span.macro-key {
           text-shadow: $text-shadow;
-          color: $color-text-dim;
+          color: rgb($color-text-dim);
           background-color: transparent;
         }
 
         &.active span.macro-key {
-          background-color: rgba($color-accent, 0.9);
+          background-color: rgba($color-primary, 0.9);
         }
       }
     }
@@ -76,7 +76,7 @@
 
       span.page-number {
         text-shadow: $text-shadow;
-        color: $color-text;
+        color: rgb($color-text);
       }
     }
   }

@@ -25,12 +25,12 @@
     cursor: context-menu;
 
     &.context {
-      border-color: $color-accent-secondary;
+      border-color: rgb($color-secondary);
     }
 
     span.player-name {
       text-shadow: $text-shadow;
-      color: $color-text-dim;
+      color: rgb($color-text-dim);
     }
   }
 }

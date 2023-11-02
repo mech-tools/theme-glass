@@ -33,7 +33,7 @@
     }
 
     div.control-buttons a i {
-      @mixin link $color-text-dim;
+      @mixin link rgb($color-text-dim);
 
       font-size: 13px;
     }

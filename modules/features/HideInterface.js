@@ -17,11 +17,10 @@ export class HideInterface extends BaseFeature {
 
   /** @override */
   fireFeature() {
-    // Get the appropriate setting and check it is not null
+    // Get the appropriate setting
     const currentValues = JSON.parse(
       game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.HIDE_INTERFACE_VALUES)
     );
-    if (!currentValues) return;
 
     // Get the current user role
     const currentRole = game.user.isGM ? "gm" : "player";

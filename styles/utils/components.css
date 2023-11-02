@@ -20,14 +20,14 @@
 }
 
 /* CREATE ICON & TEXT LINK */
-@define-mixin link $color: $color-text {
+@define-mixin link $color: rgb($color-text) {
   color: $color;
   text-shadow: $text-shadow;
   cursor: pointer;
 
   &:hover,
   &.active {
-    color: $color-text-highlight;
+    color: rgb($color-text-highlight);
   }
 
   a:hover {
@@ -40,7 +40,7 @@
 
   &:hover i,
   &.active i {
-    color: $color-text-highlight;
+    color: rgb($color-text-highlight);
   }
 }
 
@@ -53,10 +53,10 @@
   @mixin link;
 
   border: 1px solid transparent;
-  background-color: rgba($color-accent, 0.75);
+  background-color: rgba($color-primary, 0.75);
 
   &:hover {
-    border: 1px solid $color-accent-secondary;
+    border: 1px solid rgb($color-secondary);
     text-shadow: none;
   }
 
@@ -75,11 +75,11 @@
   border: 1px solid transparent;
 
   &:hover {
-    border: 1px solid $color-accent-secondary;
+    border: 1px solid rgb($color-secondary);
   }
 
   &.active {
-    background-color: rgba($color-accent, 0.75) !important;
-    border: 1px solid $color-accent-secondary;
+    background-color: rgba($color-primary, 0.75) !important;
+    border: 1px solid rgb($color-secondary);
   }
 }

@@ -40,7 +40,7 @@
         }
 
         &:not(:first-child) {
-          @mixin link $color-text-dim;
+          @mixin link rgb($color-text-dim);
         }
       }
 
@@ -71,7 +71,7 @@
       &.context {
         box-shadow: none;
 
-        border-color: $color-accent-secondary;
+        border-color: rgb($color-secondary);
       }
 
       &.document {
@@ -87,7 +87,7 @@
           border-bottom-color: transparent;
 
           h3 {
-            color: $color-text;
+            color: rgb($color-text);
             cursor: pointer;
           }
 

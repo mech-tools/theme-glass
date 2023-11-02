@@ -1,8 +1,6 @@
 import { CONSTANTS } from "../shared/constants.js";
-import { HideInterfaceSetting } from "./HideInterfaceSetting.js";
-
-/** Debounce calls before reloading page */
-const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 500);
+import { ColorThemeSettings } from "./ColorThemeSettings.js";
+import { HideInterfaceSettings } from "./HideInterfaceSettings.js";
 
 /** Settings global names */
 export const SETTINGS = {
@@ -14,7 +12,9 @@ export const SETTINGS = {
   NO_PAUSE: "no-pause",
   REDUCE_SCENE_LIST: "reduce-scene-list",
   HIDE_INTERFACE_FORM: "hide-interface-form",
-  HIDE_INTERFACE_VALUES: "hide-interface-values"
+  HIDE_INTERFACE_VALUES: "hide-interface-values",
+  COLOR_THEME_FORM: "color-theme-form",
+  COLOR_THEME_VALUES: "color-theme-values"
 };
 
 /** Register settings */
@@ -27,7 +27,7 @@ export function registerSettings() {
     config: true,
     default: true,
     type: Boolean,
-    onChange: () => debouncedReload()
+    onChange: () => foundry.utils.debouncedReload()
   });
 
   // Chat opacity Setting
@@ -38,7 +38,7 @@ export function registerSettings() {
     config: true,
     default: true,
     type: Boolean,
-    onChange: () => debouncedReload()
+    onChange: () => foundry.utils.debouncedReload()
   });
 
   // Chat opacity value Setting
@@ -58,7 +58,7 @@ export function registerSettings() {
       step: 0.25
     },
     type: Number,
-    onChange: () => debouncedReload()
+    onChange: () => foundry.utils.debouncedReload()
   });
 
   // Chat cards opacity timer Setting
@@ -78,7 +78,7 @@ export function registerSettings() {
       step: 1
     },
     type: Number,
-    onChange: () => debouncedReload()
+    onChange: () => foundry.utils.debouncedReload()
   });
 
   // Collapse hotbar Setting
@@ -89,7 +89,7 @@ export function registerSettings() {
     config: true,
     default: false,
     type: Boolean,
-    onChange: () => debouncedReload()
+    onChange: () => foundry.utils.debouncedReload()
   });
 
   // No pause Setting
@@ -100,7 +100,7 @@ export function registerSettings() {
     config: true,
     default: false,
     type: Boolean,
-    onChange: () => debouncedReload()
+    onChange: () => foundry.utils.debouncedReload()
   });
 
   // Reduce scene list setting
@@ -115,9 +115,12 @@ export function registerSettings() {
     config: true,
     default: false,
     type: Boolean,
-    onChange: () => debouncedReload()
+    onChange: () => foundry.utils.debouncedReload()
   });
 
-  // Hide interface settings window
-  HideInterfaceSetting.register();
+  // Hide interface setting window
+  HideInterfaceSettings.register();
+
+  // Color theme settings window
+  ColorThemeSettings.register();
 }

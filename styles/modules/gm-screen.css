@@ -23,7 +23,7 @@ div.gm-screen-app {
   div.gm-screen-container {
     background: none;
 
-    background-color: rgba($color-accent, 0.75);
+    background-color: rgba($color-primary, 0.75);
 
     div.gm-screen-grid {
       /* CELL HEADERS */
@@ -31,11 +31,11 @@ div.gm-screen-app {
         opacity: 0.95;
 
         a {
-          @mixin link $color-text-dim;
+          @mixin link rgb($color-text-dim);
         }
 
         h5 {
-          color: $color-text;
+          color: rgb($color-text);
           text-shadow: $text-shadow;
         }
       }
@@ -50,11 +50,11 @@ div.gm-screen-app {
 
       /* CELL WITHOUT CONTENT */
       div.gm-screen-grid-cell-content {
-        border-color: $color-text-dim;
+        border-color: rgb($color-text-dim);
 
         div.gm-screen-grid-cell-hint {
-          color: $color-text-dim;
-          border-color: $color-text-dim;
+          color: rgb($color-text-dim);
+          border-color: rgb($color-text-dim);
         }
 
         /* Fix for journal headers */

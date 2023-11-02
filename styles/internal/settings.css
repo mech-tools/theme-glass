@@ -1,4 +1,5 @@
-#theme-glass-hide-interface-form {
+#theme-glass-hide-interface-form,
+#theme-glass-color-theme-form {
   div.how-to {
     font-weight: bold;
     text-align: center;
@@ -15,5 +16,9 @@
     &.push-right {
       margin-left: auto;
     }
+  }
+
+  div.form-group input.color {
+    margin-right: 10px;
   }
 }

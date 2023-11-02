@@ -1,17 +1,17 @@
 #context-menu {
   box-shadow: $bg-shadow;
-  background-color: $color-accent;
+  background-color: rgb($color-primary);
 
   /* ITEMS LIST */
   li.context-item {
-    color: $color-text !important;
+    color: rgb($color-text) !important;
     text-shadow: $text-shadow !important;
     padding: 2px 5px;
     cursor: pointer;
 
     &:hover,
     &.active {
-      color: $color-text-highlight !important;
+      color: rgb($color-text-highlight) !important;
     }
 
     a:hover {
@@ -19,11 +19,11 @@
     }
 
     i {
-      color: rgba($color-accent-secondary, 0.9) !important;
+      color: rgba($color-secondary, 0.9) !important;
     }
 
     &:hover i {
-      text-shadow: rgba($color-accent-secondary, 0.1) 0 0 1px !important;
+      text-shadow: rgba($color-secondary, 0.1) 0 0 1px !important;
     }
   }
 }

@@ -6,11 +6,11 @@
     /* HEADER FIRST PART */
     nav.encounters {
       a.combat-button {
-        @mixin link $color-text-dim;
+        @mixin link rgb($color-text-dim);
       }
 
       h4.encounter {
-        color: $color-text-dim;
+        color: rgb($color-text-dim);
         text-shadow: $text-shadow;
         font-size: 16px;
       }
@@ -19,11 +19,11 @@
     /* HEADER SECOND PART */
     div.encounter-controls {
       a.combat-button {
-        @mixin link $color-text-dim;
+        @mixin link rgb($color-text-dim);
       }
 
       h3.encounter-title {
-        color: $color-text;
+        color: rgb($color-text);
         text-shadow: $text-shadow;
       }
     }
@@ -34,11 +34,11 @@
     li.combatant {
       div.token-name {
         h4 {
-          color: $color-text;
+          color: rgb($color-text);
         }
 
         div.combatant-controls a.combatant-control {
-          @mixin link $color-text-dim;
+          @mixin link rgb($color-text-dim);
         }
 
         div.combatant-controls div.token-effects img {
@@ -48,7 +48,7 @@
     }
 
     div.token-initiative span.initiative {
-      color: $color-text;
+      color: rgb($color-text);
       text-shadow: $text-shadow;
     }
   }

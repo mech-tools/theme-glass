@@ -13,11 +13,11 @@
     }
 
     &:hover.active {
-      border: 1px solid $color-accent-secondary;
+      border: 1px solid rgb($color-secondary);
     }
 
     &.view {
-      border: 1px solid $color-accent-secondary;
+      border: 1px solid rgb($color-secondary);
     }
   }
 }

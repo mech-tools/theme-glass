@@ -24,17 +24,17 @@
 
     /* LOCK ICON */
     div.status-icons i {
-      color: $color-text-dim;
+      color: rgb($color-text-dim);
       transition: 0.5s;
     }
 
     &:hover div.status-icons i {
-      color: $color-text;
+      color: rgb($color-text);
     }
 
     /* FOOTER */
     compendium-footer {
-      color: $color-text;
+      color: rgb($color-text);
     }
   }
 }

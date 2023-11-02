@@ -2,12 +2,12 @@
   /* HEADER */
   header.window-header {
     h4 {
-      color: $color-text;
+      color: rgb($color-text);
       text-shadow: $text-shadow;
     }
 
     h4 a.document-id-link {
-      @mixin link $color-text-dim;
+      @mixin link rgb($color-text-dim);
     }
 
     a.header-button {

@@ -4,7 +4,7 @@ import { SETTINGS } from "./settings.js";
 /**
  * Special setting to hide various interface components
  */
-export class HideInterfaceSetting extends FormApplication {
+export class HideInterfaceSettings extends FormApplication {
   /**
    * Components i18n
    */
@@ -34,7 +34,7 @@ export class HideInterfaceSetting extends FormApplication {
   /**
    * Components default values
    */
-  DEFAULTS = {
+  static DEFAULTS = {
     logo: { player: true, gm: true },
     navigation: { player: true, gm: true },
     controls: { player: true, gm: true },
@@ -63,7 +63,7 @@ export class HideInterfaceSetting extends FormApplication {
         `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.HIDE_INTERFACE_FORM}.menu`
       ),
       icon: "fas fa-eye",
-      type: HideInterfaceSetting,
+      type: HideInterfaceSettings,
       restricted: true
     });
 
@@ -71,9 +71,9 @@ export class HideInterfaceSetting extends FormApplication {
     game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.HIDE_INTERFACE_VALUES, {
       scope: "world",
       config: false,
-      default: null,
+      default: JSON.stringify(this.DEFAULTS),
       type: String,
-      onChange: () => debouncedReload()
+      onChange: () => foundry.utils.debouncedReload()
     });
   }
 
@@ -96,7 +96,7 @@ export class HideInterfaceSetting extends FormApplication {
     data.components = this.COMPONENTS;
 
     const currentValues = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.HIDE_INTERFACE_VALUES);
-    data.values = JSON.parse(currentValues) ?? this.DEFAULTS;
+    data.values = JSON.parse(currentValues);
 
     return data;
   }

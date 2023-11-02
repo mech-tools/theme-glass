@@ -1,6 +1,7 @@
 import {
   BlurInterface,
   BlurWarningMessage,
+  ChangeColorTheme,
   ChatOpacity,
   CollapseHotbar,
   HideInterface,
@@ -44,6 +45,7 @@ new (class ThemeGlass {
     [
       new BlurInterface(),
       new BlurWarningMessage(),
+      new ChangeColorTheme(),
       new ChatOpacity(),
       new CollapseHotbar(),
       new HideInterface(),

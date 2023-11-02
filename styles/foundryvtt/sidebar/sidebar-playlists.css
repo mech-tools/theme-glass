@@ -4,7 +4,7 @@
   header.playlist-header {
     text-decoration: none;
 
-    background-color: rgba($color-accent, 0.5);
+    background-color: rgba($color-primary, 0.5);
     border-color: rgba(0, 0, 0, 0.15);
 
     h4 {
@@ -20,28 +20,28 @@
   }
 
   i.volume-icon {
-    color: $color-text-dim;
+    color: rgb($color-text-dim);
     text-shadow: $text-shadow;
   }
 
   a.sound-control {
-    @mixin link $color-text-dim;
+    @mixin link rgb($color-text-dim);
   }
 
   a.sound-control[data-action="playlist-stop"],
   a.sound-control[data-action="sound-stop"],
   a.sound-control:not(.inactive)[data-action="sound-repeat"] {
-    @mixin link $color-accent-secondary;
+    @mixin link rgb($color-secondary);
   }
 
   li.sound h4 {
-    color: $color-text;
+    color: rgb($color-text);
     text-shadow: $text-shadow;
   }
 
   /* CURRENTLY PLAYING */
   #currently-playing ol.playlist-sounds div.sound-playback div.sound-timer {
-    color: $color-text-dim;
+    color: rgb($color-text-dim);
     text-shadow: $text-shadow;
   }
 

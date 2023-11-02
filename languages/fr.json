@@ -21,6 +21,16 @@
         "how-to": "Cocher uniquement les composants que vous souhaitez garder afficher pour les joueurs et ou les GM.",
         "logo": "Logo FoundryVTT",
         "navigation": "Navigation des scènes"
+      },
+      "color-theme-form": {
+        "menu": "Modifier le thème de couleur (global)",
+        "title": "Thème de couleur",
+        "how-to": "Changez les couleurs des divers composants en fournissant des codes hexadécimaux valides.",
+        "color-primary": "Primaire",
+        "color-secondary": "Secondaire",
+        "color-text": "Texte",
+        "color-text-highlight": "Texte en avant",
+        "color-text-dim": "Texte en retrait"
       }
     },
     "blurWarningMessage": "⚠️ Ce module utilise beaucoup d'effets de flou. Si vous expérimentez une baisse de performance, vous pouvez cliquer sur le bouton ci-dessous pour désactiver le paramètre : \"Effets de flou\"."

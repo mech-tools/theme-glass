@@ -21,6 +21,16 @@
         "how-to": "Uncheck the components you wish to hide from the players and/or the GM.",
         "logo": "FoundryVTT logo",
         "navigation": "Scenes navigation"
+      },
+      "color-theme-form": {
+        "menu": "Color theme settings (world)",
+        "title": "Color theme",
+        "how-to": "Change the colors of the various components by supplying valid hexadecimal codes.",
+        "color-primary": "Primary",
+        "color-secondary": "Secondary",
+        "color-text": "Text",
+        "color-text-highlight": "Highlighted text",
+        "color-text-dim": "Dimmed text"
       }
     },
     "blurWarningMessage": "⚠️ This module makes extensive use of blur effects. If you experience a drop in performance, you can click on the button below to disable the setting: \"Blur effects\"."

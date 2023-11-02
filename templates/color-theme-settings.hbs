@@ -1,0 +1,29 @@
+<div class="interface-form">
+  <div class="how-to">
+    <i class="fa-solid fa-brush"></i>
+    <span>{{localize "theme-glass.settings.color-theme-form.how-to"}}</span>
+  </div>
+  <hr />
+  <form>
+    {{#each components}}
+      <div class="form-group">
+        <label>{{this}}</label>
+        {{#with @key as | key |}}
+          {{#with (lookup ../../values [key])}}
+            <input class="color" type="text" value="{{.}}" required />
+            <input type="color" name="{{key}}" value="{{.}}" required />
+          {{/with}}
+        {{/with}}
+      </div>
+    {{/each}}
+    <hr />
+    <footer class="flexrow">
+      <button id="reset">
+        <i class="fa-solid fa-trash-can-arrow-up"></i>{{localize "Reset"}}
+      </button>
+      <button type="submit" name="submit">
+        <i class="fas fa-save"></i>{{localize "Save Changes"}}
+      </button>
+    </footer>
+  </form>
+</div>
