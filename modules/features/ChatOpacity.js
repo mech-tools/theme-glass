@@ -7,7 +7,10 @@ import BaseFeature from "./BaseFeature.js";
  */
 export class ChatOpacity extends BaseFeature {
   /** @override */
-  settingName = "CHAT_OPACITY";
+  byPassSetting = true;
+
+  /** @override */
+  settingName = "CHAT_OPACITY_VALUE";
 
   /** @override */
   hookName = "ready";
@@ -17,11 +20,14 @@ export class ChatOpacity extends BaseFeature {
 
   /** @override */
   fireFeature() {
+    const chatOpacityValue = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY_VALUE);
+
+    // Quit if no opacity
+    if (chatOpacityValue === 1) return;
+
+    // Set up DOM with basic values
     document.body.classList.add("addChatOpacity");
-    document.documentElement.style.setProperty(
-      "--chat-opactity-value",
-      game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY_VALUE)
-    );
+    document.documentElement.style.setProperty("--chat-opactity-value", chatOpacityValue);
 
     // Handle old chat cards
     document
@@ -36,13 +42,16 @@ export class ChatOpacity extends BaseFeature {
    * Handle the opacity of a newly created chat cards
    */
   handleNewChatCards() {
-    Hooks.on("renderChatMessage", async (message, html) => {
-      html[0].classList.add("opacity-delay");
+    const timer = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY_TIMER) * 1000;
 
-      const timer = game.settings.get(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY_TIMER) * 1000;
+    Hooks.on("renderChatMessage", async (message, html) => {
+      const rawHtml = html[0];
+
+      rawHtml.classList.add("opacity-delay");
+
       await new Promise((r) => setTimeout(r, timer)).then(() => {
-        html[0].classList.add("opacity-transition");
-        html[0].classList.remove("opacity-delay");
+        rawHtml.classList.add("opacity-transition");
+        rawHtml.classList.remove("opacity-delay");
       });
     });
   }

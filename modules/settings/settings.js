@@ -5,10 +5,9 @@ import { HideInterfaceSettings } from "./HideInterfaceSettings.js";
 /** Settings global names */
 export const SETTINGS = {
   ENABLE_BLUR: "enable-blur",
-  CHAT_OPACITY: "chat-opacity",
   CHAT_OPACITY_VALUE: "chat-opacity-value",
   CHAT_OPACITY_TIMER: "chat-opacity-timer",
-  WINDOW_CONTENT_OPACITY: "window-content-opacity",
+  WINDOW_CONTENT_OPACITY_VALUE: "window-content-opacity-value",
   COLLAPSE_HOTBAR: "collapse-hotbar",
   NO_PAUSE: "no-pause",
   REDUCE_SCENE_LIST: "reduce-scene-list",
@@ -31,17 +30,6 @@ export function registerSettings() {
     onChange: () => foundry.utils.debouncedReload()
   });
 
-  // Chat opacity Setting
-  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY, {
-    name: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY}-name`),
-    hint: game.i18n.localize(`${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.CHAT_OPACITY}-hint`),
-    scope: "world",
-    config: true,
-    default: true,
-    type: Boolean,
-    onChange: () => foundry.utils.debouncedReload()
-  });
-
   // Chat opacity value Setting
   game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.CHAT_OPACITY_VALUE, {
     name: game.i18n.localize(
@@ -55,7 +43,7 @@ export function registerSettings() {
     default: 0.5,
     range: {
       min: 0.1,
-      max: 0.9,
+      max: 1,
       step: 0.1
     },
     type: Number,
@@ -83,12 +71,12 @@ export function registerSettings() {
   });
 
   // Window content opacity Setting
-  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.WINDOW_CONTENT_OPACITY, {
+  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.WINDOW_CONTENT_OPACITY_VALUE, {
     name: game.i18n.localize(
-      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.WINDOW_CONTENT_OPACITY}-name`
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.WINDOW_CONTENT_OPACITY_VALUE}-name`
     ),
     hint: game.i18n.localize(
-      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.WINDOW_CONTENT_OPACITY}-hint`
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.WINDOW_CONTENT_OPACITY_VALUE}-hint`
     ),
     scope: "world",
     config: true,

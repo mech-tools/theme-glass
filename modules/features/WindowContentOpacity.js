@@ -7,7 +7,10 @@ import BaseFeature from "./BaseFeature.js";
  */
 export class WindowContentOpacity extends BaseFeature {
   /** @override */
-  settingName = "WINDOW_CONTENT_OPACITY";
+  byPassSetting = true;
+
+  /** @override */
+  settingName = "WINDOW_CONTENT_OPACITY_VALUE";
 
   /** @override */
   hookName = "ready";
@@ -19,12 +22,13 @@ export class WindowContentOpacity extends BaseFeature {
   fireFeature() {
     const windowContentOpacityValue = game.settings.get(
       CONSTANTS.MODULE_NAME,
-      SETTINGS.WINDOW_CONTENT_OPACITY
+      SETTINGS.WINDOW_CONTENT_OPACITY_VALUE
     );
 
     // Quit if no opacity
     if (windowContentOpacityValue === 1) return;
 
+    // Set up DOM with basic values
     document.body.classList.add("addWindowContentOpacity");
     document.documentElement.style.setProperty(
       "--window-content-opactity-value",
