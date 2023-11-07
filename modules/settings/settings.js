@@ -8,6 +8,7 @@ export const SETTINGS = {
   CHAT_OPACITY: "chat-opacity",
   CHAT_OPACITY_VALUE: "chat-opacity-value",
   CHAT_OPACITY_TIMER: "chat-opacity-timer",
+  WINDOW_CONTENT_OPACITY: "window-content-opacity",
   COLLAPSE_HOTBAR: "collapse-hotbar",
   NO_PAUSE: "no-pause",
   REDUCE_SCENE_LIST: "reduce-scene-list",
@@ -76,6 +77,26 @@ export function registerSettings() {
       min: 1,
       max: 30,
       step: 1
+    },
+    type: Number,
+    onChange: () => foundry.utils.debouncedReload()
+  });
+
+  // Window content opacity Setting
+  game.settings.register(CONSTANTS.MODULE_NAME, SETTINGS.WINDOW_CONTENT_OPACITY, {
+    name: game.i18n.localize(
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.WINDOW_CONTENT_OPACITY}-name`
+    ),
+    hint: game.i18n.localize(
+      `${CONSTANTS.MODULE_NAME}.settings.${SETTINGS.WINDOW_CONTENT_OPACITY}-hint`
+    ),
+    scope: "world",
+    config: true,
+    default: 0.9,
+    range: {
+      min: 0.5,
+      max: 1,
+      step: 0.1
     },
     type: Number,
     onChange: () => foundry.utils.debouncedReload()

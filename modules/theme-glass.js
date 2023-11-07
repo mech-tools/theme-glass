@@ -6,7 +6,8 @@ import {
   CollapseHotbar,
   HideInterface,
   ReduceScenesHeight,
-  RemovePause
+  RemovePause,
+  WindowContentOpacity
 } from "./features/index.js";
 import { registerSettings } from "./settings/settings.js";
 import { logger } from "./shared/helpers.js";
@@ -50,7 +51,8 @@ new (class ThemeGlass {
       new CollapseHotbar(),
       new HideInterface(),
       new ReduceScenesHeight(),
-      new RemovePause()
+      new RemovePause(),
+      new WindowContentOpacity()
     ].forEach((f) => f.onHook());
   }
 })();

@@ -9,6 +9,8 @@
       "chat-opacity-value-hint": "If \"Chat opacity\" is enabled, this setting controls the opacity value of the chat cards.",
       "chat-opacity-timer-name": "Chat opacity timer (world)",
       "chat-opacity-timer-hint": "If \"Chat opacity\" is enabled, this setting controls how long before a newly created chat card becomes transparent (in seconds).",
+      "window-content-opacity-name": "Window content opacity (world)",
+      "window-content-opacity-hint": "Increases or reduces the opacity of all windows except those linked to the sidebar.",
       "collapse-hotbar-name": "Collapse hotbar (world)",
       "collapse-hotbar-hint": "Collapses the hotbar on startup. You may find this setting usefull if your party do not use macros.",
       "no-pause-name": "Remove pause (world)",

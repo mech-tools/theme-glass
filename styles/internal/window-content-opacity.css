@@ -1,0 +1,6 @@
+/* WINDOW CONTENT OPACITY */
+body.addWindowContentOpacity .window-app {
+  &:not(.image-popout) section.window-content {
+    opacity: var(--window-content-opactity-value);
+  }
+}

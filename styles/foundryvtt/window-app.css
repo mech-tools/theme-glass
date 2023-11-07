@@ -15,11 +15,6 @@
     }
   }
 
-  /* CONTENT */
-  &:not(.image-popout) section.window-content {
-    opacity: 0.9;
-  }
-
   /* TARGET ALL SIDEBARS & MACROS POPOUT */
   &#macros-popout,
   &#chat-popout,

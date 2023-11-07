@@ -6,3 +6,4 @@ export * from "./CollapseHotbar.js";
 export * from "./HideInterface.js";
 export * from "./ReduceScenesHeight.js";
 export * from "./RemovePause.js";
+export * from "./WindowContentOpacity.js";
