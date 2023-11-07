@@ -1,0 +1,5 @@
+/* DEFINITIONS */
+$text-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+$bg-shadow: rgba(0, 0, 0, 0.75) 0 2px 8px;
+$bg-border: 1px solid rgba(255, 255, 255, 0.2);
+$bg-blur: blur(5px);

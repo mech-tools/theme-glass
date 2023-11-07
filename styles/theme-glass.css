@@ -1,7 +1,8 @@
-/* DEFINITIONS */
-@import "utils/base.css";
-@import "utils/components.css";
-@import "utils/fields.css";
+/* MODULE DEFINITIONS */
+@import "internal/base.css";
+@import "internal/components.css";
+@import "internal/fields.css";
+@import "internal/settings.css";
 
 /* FVTT CORE */
 @import "foundryvtt/window-app.css";
@@ -22,13 +23,13 @@
 @import "foundryvtt/sidebar/sidebar-compendium.css";
 @import "foundryvtt/sidebar/sidebar-settings.css";
 
-/* THEME: GLASS, FEATURES RELATED */
-@import "internal/settings.css";
-@import "internal/blur-interface.css";
-@import "internal/chat-opacity.css";
-@import "internal/hide-interface.css";
-@import "internal/reduce-scenes-height.css";
-@import "internal/window-content-opacity.css";
+/* FEATURES RELATED */
+@import "features/blur-interface.css";
+@import "features/chat-opacity.css";
+@import "features/color-theme.css";
+@import "features/hide-interface.css";
+@import "features/reduce-scenes-height.css";
+@import "features/window-content-opacity.css";
 
 /* THIRD-PARTY MODULES */
 @import "modules/dice-tray.css";
