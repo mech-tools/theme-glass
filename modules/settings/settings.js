@@ -53,9 +53,9 @@ export function registerSettings() {
     config: true,
     default: 0.5,
     range: {
-      min: 0.25,
-      max: 0.75,
-      step: 0.25
+      min: 0.1,
+      max: 0.9,
+      step: 0.1
     },
     type: Number,
     onChange: () => foundry.utils.debouncedReload()
