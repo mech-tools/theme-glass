@@ -11,7 +11,7 @@ body.hideLogo {
 
   /* Preserve top spacing */
   #ui-left {
-    margin-top: 125px;
+    padding-top: 125px;
   }
 
   /* Move navigation left */
