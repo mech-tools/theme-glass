@@ -50,3 +50,4 @@ Depending on the work load, I can make certain modules compatible with this them
 | [Dice Tray](https://gitlab.com/asacolips-projects/foundry-mods/foundry-vtt-dice-calculator) | ✅            | Styling overhaul , but hover colors are still vanilla |
 | [GM Screen](https://github.com/ElfFriend-DnD/foundryvtt-gmScreen)                           | ✅            | Styling overhaul                                      |
 | [SmallTime](https://github.com/unsoluble/smalltime)                                         | ✅            | Force opacity while resting                           |
+| [Search and Highlight](https://github.com/Khaali-dev/fullsearch)                            | ✅            | Styling overhaul                                      |
