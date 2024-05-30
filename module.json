@@ -16,7 +16,6 @@
     }
   ],
   "relationships": {},
-  "conflicts": [],
   "socket": true,
   "scripts": [],
   "esmodules": ["./build/theme-glass.js"],

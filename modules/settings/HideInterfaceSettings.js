@@ -79,7 +79,7 @@ export class HideInterfaceSettings extends FormApplication {
 
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       ...super.defaultOptions,
       template: `${CONSTANTS.PATH}templates/hide-interface-settings.hbs`,
       title: game.i18n.localize(

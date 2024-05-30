@@ -63,7 +63,7 @@ export class ColorThemeSettings extends FormApplication {
 
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       ...super.defaultOptions,
       template: `${CONSTANTS.PATH}templates/color-theme-settings.hbs`,
       title: game.i18n.localize(
