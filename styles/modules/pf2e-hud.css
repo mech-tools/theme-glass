@@ -1,44 +1,46 @@
+/* SHARED */
+#pf2e-hud-persistent #pf2e-hud-persistent-menu,
+#pf2e-hud-persistent #pf2e-hud-persistent-portrait,
+#pf2e-hud-persistent #pf2e-hud-persistent-main .panel,
+#pf2e-hud-persistent #pf2e-hud-persistent-main .shortcut,
+#pf2e-hud-persistent #pf2e-hud-persistent-effects .effect-item .icon,
+#pf2e-hud-token-main .panel {
+  background-image: none;
+  border: 0;
+
+  @mixin transparent-box;
+  @mixin bordered-box;
+
+  box-shadow: $bg-shadow;
+  color: rgb($color-text);
+  text-shadow: $text-shadow;
+
+  a {
+    @mixin link;
+
+    &.disabled,
+    &.disabled i {
+      color: rgb($color-text-dim);
+    }
+  }
+
+  i.disabled {
+    color: rgb($color-text-dim);
+  }
+
+  input {
+    @mixin text-input;
+  }
+
+  hr {
+    border-color: rgba($color-primary, 0.25);
+  }
+}
+
+/* PERSISANT INTERFACE */
 #pf2e-hud-persistent {
   & > div {
     margin-right: 2px;
-  }
-
-  /* GENERAL */
-  #pf2e-hud-persistent-menu,
-  #pf2e-hud-persistent-portrait,
-  #pf2e-hud-persistent-main .panel,
-  #pf2e-hud-persistent-main .shortcut,
-  #pf2e-hud-persistent-effects .effect-item .icon {
-    background-image: none;
-    border: 0;
-
-    @mixin transparent-box;
-    @mixin bordered-box;
-
-    box-shadow: $bg-shadow;
-    color: rgb($color-text);
-    text-shadow: $text-shadow;
-
-    a {
-      @mixin link;
-
-      &.disabled,
-      &.disabled i {
-        color: rgb($color-text-dim);
-      }
-    }
-
-    i.disabled {
-      color: rgb($color-text-dim);
-    }
-
-    input {
-      @mixin text-input;
-    }
-
-    hr {
-      border-color: rgba($color-primary, 0.25);
-    }
   }
 
   /* PORTRAIT */
@@ -154,5 +156,28 @@
         color: rgb($color-text);
       }
     }
+  }
+}
+
+/* TOKEN HUD */
+#pf2e-hud-token-main {
+  .panel.top,
+  .panel.left,
+  .panel.right,
+  .panel.bottom {
+    border: none;
+    --outer-background: none;
+  }
+
+  .panel.top .name {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background: rgba($color-primary, 0.75);
+    margin-left: -4px;
+    margin-top: -2px;
+  }
+
+  .panel.bottom .info:not(.active) {
+    color: rgb($color-text-dim);
   }
 }
