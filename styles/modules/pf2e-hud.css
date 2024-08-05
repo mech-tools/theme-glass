@@ -1,0 +1,158 @@
+#pf2e-hud-persistent {
+  & > div {
+    margin-right: 2px;
+  }
+
+  /* GENERAL */
+  #pf2e-hud-persistent-menu,
+  #pf2e-hud-persistent-portrait,
+  #pf2e-hud-persistent-main .panel,
+  #pf2e-hud-persistent-main .shortcut,
+  #pf2e-hud-persistent-effects .effect-item .icon {
+    background-image: none;
+    border: 0;
+
+    @mixin transparent-box;
+    @mixin bordered-box;
+
+    box-shadow: $bg-shadow;
+    color: rgb($color-text);
+    text-shadow: $text-shadow;
+
+    a {
+      @mixin link;
+
+      &.disabled,
+      &.disabled i {
+        color: rgb($color-text-dim);
+      }
+    }
+
+    i.disabled {
+      color: rgb($color-text-dim);
+    }
+
+    input {
+      @mixin text-input;
+    }
+
+    hr {
+      border-color: rgba($color-primary, 0.25);
+    }
+  }
+
+  /* PORTRAIT */
+  #pf2e-hud-persistent-portrait {
+    --flash-outset-color: rgba($color-secondary, 0.75);
+    --flash-inset-color: rgba($color-secondary, 0.75);
+
+    & > .top {
+      border-radius: inherit;
+      top: 1px;
+      left: 1px;
+      width: calc(100% - 2px);
+
+      .name {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        background: rgba($color-primary, 0.75);
+      }
+    }
+
+    & > .bottom {
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      bottom: 1px;
+      left: 1px;
+      width: calc(100% - 2px);
+      background: rgba($color-primary, 0.75);
+    }
+  }
+
+  /* INFOS */
+  #pf2e-hud-persistent-main .infos .info:not(.active) {
+    color: rgb($color-text-dim);
+  }
+
+  /* SHORTCUTS */
+  #pf2e-hud-persistent-main .shortcuts .shortcut.empty {
+    background-color: rgba(0, 0, 0, 0.15);
+
+    &:after {
+      content: "";
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      border: 1px rgba($color-primary, 0.75) dashed;
+      border-radius: inherit;
+      z-index: -1;
+    }
+  }
+
+  /* EFFECTS */
+  #pf2e-hud-persistent-effects hr {
+    border-color: rgb($color-primary, 0.25);
+  }
+
+  /* HOTBAR */
+  #hotbar #action-bar {
+    #macro-list {
+      background: transparent;
+      border: 0;
+
+      @mixin bordered-box;
+
+      box-shadow: $bg-shadow;
+      margin-top: 2px;
+      height: 96%;
+
+      li.macro {
+        box-shadow: none;
+
+        @mixin transparent-box;
+
+        border: 1px solid transparent;
+
+        &:not(:last-child) {
+          border-right: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        &:hover {
+          border: 1px solid rgb($color-secondary);
+        }
+
+        span.macro-key {
+          text-shadow: $text-shadow;
+          color: rgb($color-text-dim);
+          background-color: transparent;
+        }
+
+        &.active span.macro-key {
+          background-color: rgba($color-primary, 0.9);
+        }
+      }
+    }
+
+    #hotbar-page-controls {
+      background-image: none;
+      border: 0;
+
+      @mixin transparent-box;
+      @mixin bordered-box;
+
+      box-shadow: $bg-shadow;
+      margin-top: 2px;
+
+      a.page-control {
+        @mixin link;
+      }
+
+      span.page-number {
+        text-shadow: $text-shadow;
+        color: rgb($color-text);
+      }
+    }
+  }
+}
