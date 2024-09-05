@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Foundry-v12-informational)
-![Latest Release Download Count](https://img.shields.io/github/downloads/DarKDinDoN/theme-glass/latest/module.zip)
+![Latest Release Download Count](https://img.shields.io/github/downloads/mech-tools/theme-glass/latest/module.zip)
 
 ![](./screenshot-1.jpg)
 

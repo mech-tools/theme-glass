@@ -10,8 +10,8 @@
   },
   "authors": [
     {
-      "name": "DarKDinDoN",
-      "url": "https://github.com/DarKDinDoN",
+      "name": "Maxime",
+      "url": "https://github.com/mech-tools",
       "discord": "Maxime#1562"
     }
   ],
@@ -48,15 +48,15 @@
   "media": [
     {
       "type": "cover",
-      "url": "https://raw.githubusercontent.com/DarKDinDoN/theme-glass/main/screenshot-1.jpg"
+      "url": "https://raw.githubusercontent.com/mech-tools/theme-glass/main/screenshot-1.jpg"
     },
     {
       "type": "screenshot",
-      "url": "https://raw.githubusercontent.com/DarKDinDoN/theme-glass/main/screenshot-1.jpg"
+      "url": "https://raw.githubusercontent.com/mech-tools/theme-glass/main/screenshot-1.jpg"
     },
     {
       "type": "screenshot",
-      "url": "https://raw.githubusercontent.com/DarKDinDoN/theme-glass/main/screenshot-2.jpg"
+      "url": "https://raw.githubusercontent.com/mech-tools/theme-glass/main/screenshot-2.jpg"
     }
   ]
 }

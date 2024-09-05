@@ -4,7 +4,7 @@
   "private": true,
   "description": "Theme: Glass, for FoundryVTT.",
   "license": "MIT",
-  "author": "DarKDinDoN",
+  "author": "Maxime",
   "scripts": {
     "build": "gulp build",
     "gulp": "gulp"
