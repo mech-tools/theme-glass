@@ -3,6 +3,8 @@
 
 ![](./screenshot-1.jpg)
 
+# ⚠️ This module will not be updated after FoundryVTT version 12.
+
 # Theme: Glass
 
 A system agnostic (almost) theme for FoundryVTT.
